@@ -14,7 +14,7 @@
 
 
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+if [[ -s  "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
@@ -29,17 +29,17 @@ fi
 setopt auto_pushd
 # Enable: Command Auto-Fixing
 setopt correct
+# Disable: 'no matches found'
+setopt nonomatch
 
 # Customize: zsh-autosuggestion
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
-# Alias: ls
-alias ls-old='/bin/ls -aG'
-alias ls='colorls'
 
 # Enable Vi-Edit Mode in ZLE(zsh-line-edit)
 # REF: https://qiita.com/b4b4r07/items/8db0257d2e6f6b19ecb9
 bindkey -v
+
 # vi-cmd-mode を抜けるキーバインドを Ctrl-Q に変更
 # REF: https://superuser.com/questions/351499/how-to-switch-comfortably-to-vi-command-mode-on-the-zsh-command-line
 bindkey -M viins '^Q' vi-cmd-mode
@@ -48,15 +48,26 @@ bindkey -M viins '^K' kill-line
 bindkey -M viins '^L' clear-screen
 bindkey -M viins '^U' kill-whole-line
 
+
+
+# Prezto のテーマ 'paradox' 使用時に上に1行
+# 空白が発生するのを防ぐため、PROMPT 環境変数
+# を上書きする
+PROMPT='${(e)$(prompt_paradox_build_prompt)}
+ ${editor_info[keymap]} '
+
+
 #############################
 #### Import from .bashrc ####
 #############################
 
-# $PATH PRIORITY SETTINGS
+# PATH PRIORITY SETTINGS
 #  1. nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-#	 2. golang
+#  2. golang
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# ENV SETTINGS
 export GOROOT="/usr/local/opt/go/libexec"
 export GOPATH="${HOME}/.golang"
 
@@ -65,6 +76,10 @@ export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 
 # pyenv init 
 eval "$(pyenv init -)"
+
+# Alias: ls
+alias ls-old='/bin/ls -aG'
+alias ls='colorls'
 
 # ALIAS: rsync (2.6.9 -> 3.1)
 alias rsync='rsync3.1'
@@ -131,9 +146,9 @@ function pdfFontEmbed() {
 
 
 }
-# less with Syntax-Highlight
+# less with Syntax-Highlight, Line-Number
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
-export LESS='-gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS'
+export LESS='-gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS -N'
 
 # Customize for Skim.app
 function SkimEnableAutoSave(){
@@ -146,7 +161,20 @@ function SkimDisableAutoSave(){
 	echo "Skim: Disabled Auto-Saving"
 }
 
-# Slack.app: Dark Theme
-function slackDarkTheme(){
-	sudo vim "/Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js"
+
+# File Encrypt & Decrypt 
+function myFileEncrypt {
+	if [ $# -ne 1 ] ;then
+		echo "usage: myFileEncrypt [file-to-encrypt]"
+	else
+		openssl aes-256-cbc -e -in "$1" -out "$1.encrypted"
+	fi
+}
+
+function myFileDecrypt {
+	if [ $# -ne 1 ] ;then
+		echo "usage: myFileDecrypt [file-to-decrypt]"
+	else
+		openssl aes-256-cbc -d -in "$1" -out "${1/.encrypted/}"
+	fi
 }
