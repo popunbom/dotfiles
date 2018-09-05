@@ -1,6 +1,3 @@
-eval "$(pyenv init -)"
-
-
 ##### PATH PRIORITY SETTINGS #####
 #  3. nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
