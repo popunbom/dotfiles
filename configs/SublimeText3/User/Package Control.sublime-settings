@@ -1,0 +1,35 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AlignTab",
+		"ayu",
+		"Codecs33",
+		"Colorsublime",
+		"ConvertToUTF8",
+		"ExpandRegion",
+		"HTML-CSS-JS Prettify",
+		"IMESupport",
+		"InputSequence",
+		"JapaneseWordSeparator",
+		"Japanize",
+		"LaTeX-cwl",
+		"LaTeXTools",
+		"Package Control",
+		"Pretty JSON",
+		"sublime-expand-region",
+		"SublimeNFDToNFCPaste",
+		"Theme - One Dark",
+		"View In Browser"
+	],
+	"repositories":
+	[
+		"https://github.com/chikatoike/IMESupport",
+		"https://github.com/kazu1107/InputSequence",
+		"https://github.com/aronwoost/sublime-expand-region"
+	]
+}

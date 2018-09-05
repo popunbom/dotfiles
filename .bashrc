@@ -1,32 +1,31 @@
-# bash PS1 Settings
-export PS1="\[\033[38;5;13m\][\[$(tput sgr0)\]\[\033[38;5;6m\]\l\[$(tput sgr0)\]\[\033[38;5;13m\]]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;14m\]\u\[$(tput sgr0)\]\[\033[38;5;7m\]@\[$(tput sgr0)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;7m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n \[$(tput sgr0)\]\[\033[38;5;13m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+eval "$(pyenv init -)"
 
-# $PATH PRIORITY SETTINGS
-#  1. nodebrew
+
+##### PATH PRIORITY SETTINGS #####
+#  3. nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-#	 2. golang
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+#  2. golang
+export PATH=/usr/local/opt/go/libexec/bin:$PATH
+#  1. rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+##### ENV SETTINGS #####
+# golang
 export GOROOT="/usr/local/opt/go/libexec"
 export GOPATH="${HOME}/.golang"
 
-# 3. Google Drive
+# ENV: Google Drive
 export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 
 # pyenv init 
 eval "$(pyenv init -)"
 
-# export MPLBACKEND="module://itermplot"
-
-# ALIAS: ls
-alias ls='ls -G'
-alias lsG='CLICOLOR_FORCE=1 ls'
-
-
-# ALIAS: grep
-alias grep='grep --color'
+# Alias: ls
+alias ls='/bin/ls -aG'
 
 # ALIAS: rsync (2.6.9 -> 3.1)
 alias rsync='rsync3.1'
+
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
@@ -58,12 +57,11 @@ function mkSemiReport() {
 	DIR_ROOT="${GOOGLE_DRIVE_ROOT}/情報学部/研究/Semi_Report"
 	PATH_RESOURCE="${GOOGLE_DRIVE_ROOT}/情報学部/.tex_resource"
 
-	NUM_OF_REPORT=$(find . -maxdepth 1 -type d | grep '.*#.*' | sed -E 's%\./\#%%g' | sort -r | head -1)
+	NUM_OF_REPORT=$(find ${DIR_ROOT} -maxdepth 1 -type d | grep -E '.*/#[0-9]+$' | sed -E 's%'"${DIR_ROOT}"'/#%%g' | sort -r | head -1)
+	# echo "NUM_OF_REPORT = ${NUM_OF_REPORT}"
 	NUM_OF_REPORT=$(expr ${NUM_OF_REPORT} + 1)
 
 	DIR_PATH="${DIR_ROOT}/#${NUM_OF_REPORT}"
-
-	echo "${DIR_PATH}"
 
 	if [[ -e ${DIR_PATH} ]]; then
 		echo "${DIR_PATH}: already exists !"
@@ -87,9 +85,9 @@ function pdfFontEmbed() {
 
 
 }
-# less with Syntax-Highlight
+# less with Syntax-Highlight, Line-Number
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
-export LESS='-gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS'
+export LESS='-gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS -N'
 
 # Customize for Skim.app
 function SkimEnableAutoSave(){
@@ -100,4 +98,22 @@ function SkimEnableAutoSave(){
 function SkimDisableAutoSave(){
 	defaults write -app Skim SKAutosaveInterval -float 0.0
 	echo "Skim: Disabled Auto-Saving"
+}
+
+
+# File Encrypt & Decrypt 
+function myFileEncrypt {
+	if [ $# -ne 1 ] ;then
+		echo "usage: myFileEncrypt [file-to-encrypt]"
+	else
+		openssl aes-256-cbc -e -in "$1" -out "$1.encrypted"
+	fi
+}
+
+function myFileDecrypt {
+	if [ $# -ne 1 ] ;then
+		echo "usage: myFileDecrypt [file-to-decrypt]"
+	else
+		openssl aes-256-cbc -d -in "$1" -out "${1/.encrypted/}"
+	fi
 }
