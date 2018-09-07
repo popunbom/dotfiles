@@ -7,3 +7,14 @@
 	editor = vim -c \"set fenc=utf-8\"
 [alias]
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+	sts = status
+	st  = status
+	cho = checkout
+	brn = branch -a -vv
+	brc = branch -a -vv
+	psh = push
+	pll = pull
+	fch = fetch
+	cmt = commit
+	lg  = log
+
