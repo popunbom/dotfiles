@@ -41,5 +41,7 @@
 	"tab_size": 2,
 	"theme": "ayu-mirage.sublime-theme",
 	"tree_animation_enabled": false,
-	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや"
+	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや",
+	"show_full_path": true,
+
 }
