@@ -15,7 +15,9 @@ export GOPATH="${HOME}/.golang"
 export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 
 # pyenv init 
-eval "$(pyenv init -)"
+if [[ -f "~/.pyenv" ]]; then
+	eval "$(pyenv init -)"
+fi
 
 # Alias: ls
 alias ls='/bin/ls -aG'
