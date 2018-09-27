@@ -15,7 +15,7 @@ export GOPATH="${HOME}/.golang"
 export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 
 # pyenv init 
-if [[ -f "~/.pyenv" ]]; then
+if [[ -d "$HOME/.pyenv" ]]; then
 	eval "$(pyenv init -)"
 fi
 
