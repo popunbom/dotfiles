@@ -18,7 +18,7 @@
 	"color_scheme": "Packages/ayu/ayu-mirage.tmTheme",
 	"draw_white_space": "none",
 	"ensure_newline_at_eof_on_save": true,
-	"font_face": "Ricty Diminished Discord",
+	"font_face": "RictyDiminished Discord",
 	"font_size": 19,
 	"highlight_line": true,
 	"ignored_packages":
@@ -36,6 +36,7 @@
 	"scroll_past_end": false,
 	"show_definitions": false,
 	"show_encoding": true,
+	"show_full_path": true,
 	"show_line_encoding": true,
 	"show_line_endings": true,
 	"tab_size": 2,
