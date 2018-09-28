@@ -23,6 +23,11 @@ alias ls='/bin/ls -aG'
 # ALIAS: rsync (2.6.9 -> 3.1)
 alias rsync='rsync3.1'
 
+# ALIAS: git
+alias g='git'
+
+# ALIAS: docker
+alias d='docker'
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/

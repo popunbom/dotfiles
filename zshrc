@@ -60,3 +60,4 @@ alias gs='/usr/local/bin/gs'
 # ALIAS: color-ls
 alias ls-old='/bin/ls -aG'
 alias ls='colorls -a'
+alias ll='colorls -al'
