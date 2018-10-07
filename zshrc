@@ -61,3 +61,13 @@ alias gs='/usr/local/bin/gs'
 alias ls-old='/bin/ls -aG'
 alias ls='colorls -a'
 alias ll='colorls -al'
+
+# fzf を使って History 検索
+if type "fzf" > /dev/null 2>&1; then
+	function select-history() {
+		BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="[History] > ")
+		CURSOR=$#BUFFER
+	}
+	zle -N select-history
+	bindkey -M viins '^r' select-history
+fi

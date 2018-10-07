@@ -14,5 +14,6 @@
 	l = log
 	a = add
 	co = checkout
+	cl = clone
 	ps = push
 	pl = pull

@@ -1,4 +1,6 @@
 ##### PATH PRIORITY SETTINGS #####
+#  4. Homebrew (sbin)
+export PATH=/usr/local/sbin:$PATH
 #  3. nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 #  2. golang
@@ -30,6 +32,9 @@ alias g='git'
 
 # ALIAS: docker
 alias d='docker'
+
+# ALIAS: ls | grep
+alias lg='/bin/ls -1 | grep'
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
