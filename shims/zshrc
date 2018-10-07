@@ -5,6 +5,8 @@ source "${HOME}/.zplug/init.zsh"
 
 zplug "sorin-ionescu/prezto"
 
+zplug "b4b4r07/enhancd", use:init.sh
+
 zplug load 
 
 # zplug load --verbose
@@ -109,3 +111,10 @@ function select-history() {
 }
 zle -N select-history
 bindkey -M viins '^r' select-history
+
+# ls -1 -> fzf -> open
+function ls-fzf-open() {
+	open $(find . -type f | fzf --prompt "OPEN FILE > " --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi {}) 2> /dev/null | head -500' )
+}
+zle -N ls-fzf-open
+bindkey -M viins '^f' ls-fzf-open

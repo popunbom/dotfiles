@@ -41,6 +41,11 @@ alias d='docker'
 # ALIAS: ls | grep
 alias lg='/bin/ls -a1 | grep'
 
+# ALIAS: fzf-prev
+alias fzf-prev="fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi {}) 2> /dev/null | head -500"
+alias fv='fzf-prev'
+
+
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
 # alias manp='man -t \!* | ps2pdf - /tmp/man_\!$.pdf && open -a Skim /tmp/man_\!$.pdf'
