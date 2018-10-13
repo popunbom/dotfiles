@@ -7,8 +7,8 @@ zplug "sorin-ionescu/prezto"
 
 zplug "b4b4r07/enhancd", use:init.sh
 
-# zplug load 
-zplug load --verbose
+zplug load 
+# zplug load --verbose
 
 
 ####################### prezto ###############################
@@ -30,6 +30,8 @@ setopt auto_pushd
 setopt correct
 # Disable: 'no matches found'
 setopt nonomatch
+# Enable: Completion dotfiles
+setopt globdots
 
 # Customize: zsh-autosuggestion
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"

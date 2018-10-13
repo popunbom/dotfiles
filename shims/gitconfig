@@ -11,6 +11,7 @@
 	b = branch -a -vv
 	f = fetch
 	c = commit
+	d = diff
 	l = log
 	a = add
 	co = checkout
