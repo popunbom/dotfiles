@@ -50,7 +50,15 @@ alias lg='/bin/ls -a1 | grep'
 # ALIAS: fzf-prev
 alias fzf-prev="fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi {}) 2> /dev/null | head -500"
 alias fv='fzf-prev'
-
+ 
+# ALIAS: ghq
+if type "ghq" > /dev/null 2>&1; then
+	alias gg='ghq get'
+	if type "fzf" > /dev/null 2>&1; then
+		alias gcd='ghq look $(ghq list | fzf)'
+		alias gls='ghq list | fzf'
+	fi
+fi
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
