@@ -1,3 +1,6 @@
 [submodule "shims/zplug"]
 	path = shims/zplug
 	url = https://github.com/zplug/zplug
+[submodule "shims/vim/bundle"]
+	path = shims/vim/bundle
+	url = https://github.com/Shougo/neobundle.vim

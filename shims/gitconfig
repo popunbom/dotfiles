@@ -15,6 +15,7 @@
 	l = log
 	a = add
 	co = checkout
+	sm = submodule
 	cl = clone
 	ps = push
 	pl = pull

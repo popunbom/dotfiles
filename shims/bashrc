@@ -6,14 +6,22 @@ export PATH=/usr/local/sbin:$PATH
 #  3. nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 #  2. golang
-export PATH=/usr/local/opt/go/libexec/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
 #  1. rust
 export PATH="$HOME/.cargo/bin:$PATH"
+# SRILM
+if [[ -e "$HOME/.srilm" ]]; then
+	export PATH="${PATH}:${HOME}/.srilm/bin:${HOME}/.srilm/bin/macosx"
+fi
+# julius
+if [[ -e "$HOME/.julius" ]]; then
+	export PATH="${PATH}:${HOME}/.julius/dictation-kit-v4.4/bin/osx"
+fi
 
 ##### ENV SETTINGS #####
 # golang
-export GOROOT="/usr/local/opt/go/libexec"
-export GOPATH="${HOME}/.golang"
+# export GOROOT="/usr/local/go/bin"
+# export GOPATH="${HOME}/.golang"
 
 # ENV: Google Drive
 export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
@@ -25,11 +33,12 @@ fi
 
 # Alias: ls
 if type "colorls" > /dev/null 2>&1; then
-	alias ls-old='/bin/ls -aG'
+	alias ls-old='/bin/ls -a'
 	alias ls='colorls -a'
 	alias ll='colorls -al'
 else
-	alias ls='/bin/ls -aG'
+	alias ls='/bin/ls -a'
+	alias ll='/bin/ls -al'
 fi
 
 # ALIAS: rsync (2.6.9 -> 3.1)
@@ -43,6 +52,7 @@ alias g='git'
 
 # ALIAS: docker
 alias d='docker'
+alias dc='docker-compose'
 
 # ALIAS: ls | grep
 alias lg='/bin/ls -a1 | grep'
@@ -50,7 +60,7 @@ alias lg='/bin/ls -a1 | grep'
 # ALIAS: fzf-prev
 alias fzf-prev="fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi {}) 2> /dev/null | head -500"
 alias fv='fzf-prev'
- 
+
 # ALIAS: ghq
 if type "ghq" > /dev/null 2>&1; then
 	alias gg='ghq get'
@@ -73,16 +83,16 @@ function manp () {
 }
 
 function mkTexDoc () {
-	DIR_NAME="${GOOGLE_DRIVE_ROOT}/情報学部/NewTexReport"
+	DIR_PATH="${GOOGLE_DRIVE_ROOT}/情報学部/NewTexReport"
 	PATH_RESOURCE="${GOOGLE_DRIVE_ROOT}/情報学部/.tex_resource"
 
-	if [[ -e $DIR_NAME ]]; then
-		echo "${DIR_NAME}: already exists !"
-		subl "${DIR_NAME}" 
+	if [[ -e $DIR_PATH ]]; then
+		echo "${DIR_PATH}: already exists !"
+		subl "${DIR_PATH}" 
 	else
-		mkdir -v -p "$DIR_NAME/img"
-		cp -v "${PATH_RESOURCE}/Preamble.tex" "${PATH_RESOURCE}/Source.tex" "$DIR_NAME/" 
-		subl "${DIR_NAME}"
+		mkdir -v -p "$DIR_PATH/img"
+		cp -v "${PATH_RESOURCE}/Preamble.tex" "${PATH_RESOURCE}/Source.tex" "$DIR_PATH/" 
+		subl "${DIR_PATH}"
 	fi
 }
 
@@ -91,16 +101,17 @@ function mkSemiReport() {
 	PATH_RESOURCE="${GOOGLE_DRIVE_ROOT}/情報学部/.tex_resource"
 
 	NUM_OF_REPORT=$(find ${DIR_ROOT} -maxdepth 1 -type d | grep -E '.*/#[0-9]+$' | sed -E 's%'"${DIR_ROOT}"'/#%%g' | sort -r | head -1)
-	# echo "NUM_OF_REPORT = ${NUM_OF_REPORT}"
 	NUM_OF_REPORT=$(expr ${NUM_OF_REPORT} + 1)
 
 	DIR_PATH="${DIR_ROOT}/#${NUM_OF_REPORT}"
 
 	if [[ -e ${DIR_PATH} ]]; then
 		echo "${DIR_PATH}: already exists !"
+		subl "${DIR_PATH}"
 	else
 		mkdir -v -p "${DIR_PATH}/img"
-		cp -v "${PATH_RESOURCE}/Preamble.tex" "${PATH_RESOURCE}/SemiReport.tex" "${DIR_PATH}/" 
+		cp -v "${PATH_RESOURCE}/SemiReport.tex"  "${DIR_PATH}/SemiReport.tex" 
+		sed -e 's#Source\.tex#SemiReport\.tex#g' "${PATH_RESOURCE}/Preamble.tex" > "${DIR_PATH}/Preamble.tex"
 		subl "${DIR_PATH}"
 	fi
 }
@@ -110,13 +121,20 @@ function pdfFontEmbed() {
 		echo "pdfFontEmbed: invalid arguments !"
 		echo "usage: pdfFontEmbed [pdf-file]"
 	else
-		OUT_NAME=$(echo $1 | sed -e 's#\.pdf#_embed.pdf#g')
+		OUT_NAME=$(echo -n $1 | sed -e 's#\.pdf#_embed.pdf#g')
 		echo "$1  -->  Font Embed  -->  ${OUT_NAME}"
-		gs -q -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile="${OUT_NAME}" "$1"
+		gs -q -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=${OUT_NAME} $1
 		pdffonts "${OUT_NAME}"
 	fi
+}
 
-
+function pdfRemovePass() {
+	if [[ $# != 2 ]]; then
+		echo "usage: pdfRemovePass [in-file] [password]"
+	else
+		OUT_NAME=$(echo -n $1 | sed -e 's#\.pdf#_decrypted.pdf#g')
+		gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sPDFPassword=$2 -sOutputFile="${OUT_NAME}" -c .setpdfwrite -f "$1"
+	fi
 }
 # less with Syntax-Highlight, Line-Number
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
