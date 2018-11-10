@@ -25,4 +25,8 @@
     print
   fi
 
+	if [[ -e "${HOME}/.zplug" ]]; then
+		zplug install
+	fi
+
 } >&2
