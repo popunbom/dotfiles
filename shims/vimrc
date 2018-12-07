@@ -23,6 +23,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 
 " <=== NeoBundle Plugins
+NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-surround'
@@ -30,6 +31,7 @@ NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'challenger-deep-theme/vim'
 NeoBundle 'felipesousa/rupza'
+NeoBundle 'yamasy1549/gochiusa.vim'
 " <=== NeoBundle Plugins
 
 call neobundle#end()
@@ -53,7 +55,7 @@ let g:user_emmet_leader_key = '<C-E>'
 " vim-airline: Settings
 let g:airline_powerline_fonts = 1
 set laststatus=2
-let g:airline_theme = 'light'
+let g:airline_theme = 'bubblegum'
 " ====== vim-airline =====>
 
 
@@ -90,11 +92,12 @@ set clipboard=unnamed,autoselect
 set mouse=a
 
 " 色空間拡張
-if has('nvim') || has('termguicolors')
-	set termguicolors
-endif
+" if has('nvim') || has('termguicolors')
+" 	set termguicolors
+" endif
 " カラースキーム変更
-colorscheme rupza
+" colorscheme rupza
+colorscheme gochiusa
 " シンタックスハイライトを有効化
 syntax on
 

@@ -18,3 +18,5 @@
 	cl = clone
 	ps = push
 	pl = pull
+	mg = merge
+	sm = submodule

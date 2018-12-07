@@ -18,6 +18,9 @@ export GOPATH="${HOME}/.golang"
 # ENV: Google Drive
 export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 
+# ENV: GUI Editor
+export GUI_EDITOR="code"
+
 # pyenv init 
 if [[ -d "$HOME/.pyenv" ]]; then
 	eval "$(pyenv init -)"
@@ -51,6 +54,17 @@ alias lg='/bin/ls -a1 | grep'
 alias fzf-prev="fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi {}) 2> /dev/null | head -500"
 alias fv='fzf-prev'
 
+# ALIAS: ghq
+if type "ghq" > /dev/null 2>&1 && type "fzf" > /dev/null 2>&1; then
+	alias gls='ghq list | fzf'
+	alias gcd='ghq look $(ghq list | fzf)'
+	alias gop='${GUI_EDITOR} "$(ghq root)/$(ghq list | fzf)"'
+fi
+
+# ALIAS: .rc edit by VIM
+alias bashrc="vim ~/.bashrc"
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
@@ -102,14 +116,13 @@ function pdfFontEmbed() {
 		echo "pdfFontEmbed: invalid arguments !"
 		echo "usage: pdfFontEmbed [pdf-file]"
 	else
-		OUT_NAME=$(echo $1 | sed -e 's#\.pdf#_embed.pdf#g')
+		OUT_NAME=$(echo -n $1 | sed -e 's#\.pdf#_embed.pdf#g')
 		echo "$1  -->  Font Embed  -->  ${OUT_NAME}"
-		gs -q -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile="${OUT_NAME}" "$1"
+		gs -q -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=\"${OUT_NAME}\" \"$1\"
 		pdffonts "${OUT_NAME}"
 	fi
-
-
 }
+
 # less with Syntax-Highlight, Line-Number
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 export LESS='-gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS -N'
