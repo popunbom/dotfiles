@@ -55,16 +55,20 @@ alias fzf-prev="fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a
 alias fv='fzf-prev'
 
 # ALIAS: ghq
-if type "ghq" > /dev/null 2>&1 && type "fzf" > /dev/null 2>&1; then
-	alias gls='ghq list | fzf'
-	alias gcd='ghq look $(ghq list | fzf)'
-	alias gop='${GUI_EDITOR} "$(ghq root)/$(ghq list | fzf)"'
+if type "ghq" > /dev/null 2>&1; then
+	alias gg='ghq get'
+	if type "fzf" > /dev/null 2>&1; then
+		alias gcd='ghq look $(ghq list | fzf)'
+		alias gls='ghq list | fzf'
+	fi
 fi
 
 # ALIAS: .rc edit by VIM
 alias bashrc="vim ~/.bashrc"
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
+ 
+
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
