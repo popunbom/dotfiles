@@ -1,13 +1,17 @@
 #!/bin/bash
 
+##### ENV #####
+
+EDITOR=vim
+
 ##### PATH PRIORITY SETTINGS #####
-#  4. Homebrew (sbin)
+#  Homebrew (sbin)
 export PATH=/usr/local/sbin:$PATH
-#  3. nodebrew
+#  nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-#  2. golang
+#  golang
 export PATH=/usr/local/opt/go/libexec/bin:$PATH
-#  1. rust
+#  rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
 ##### ENV SETTINGS #####
@@ -21,10 +25,12 @@ export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 # ENV: GUI Editor
 export GUI_EDITOR="code"
 
-# pyenv init 
-if [[ -d "$HOME/.pyenv" ]]; then
-	eval "$(pyenv init -)"
-fi
+# XXenv init 
+for anyenv in "pyenv" "rbenv" "ndenv"; do
+	if [[ -d "$HOME/.${anyenv}" ]]; then
+		eval "$(${anyenv} init -)"
+	fi
+done
 
 # Alias: ls
 if type "colorls" > /dev/null 2>&1; then
@@ -69,7 +75,10 @@ alias bashrc="vim ~/.bashrc"
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
 alias nvimrc="nvim ~/.config/nvim/init.vim"
- 
+alias gitconfig="vim ~/.gitconfig"
+
+# ALIAS: PATH
+alias PATH="echo $PATH | tr ':' '\n'"
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
