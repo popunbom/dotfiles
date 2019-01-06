@@ -46,6 +46,7 @@ alias g='git'
 
 # ALIAS: docker
 alias d='docker'
+alias dc='docker-compose'
 
 # ALIAS: ls | grep
 alias lg='/bin/ls -a1 | grep'
@@ -67,8 +68,8 @@ fi
 alias bashrc="vim ~/.bashrc"
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
+alias nvimrc="nvim ~/.config/nvim/init.vim"
  
-
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
