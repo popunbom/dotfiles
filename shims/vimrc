@@ -58,8 +58,6 @@ set laststatus=2
 let g:airline_theme = 'bubblegum'
 " ====== vim-airline =====>
 
-
-
 " <===================
 " ======一般設定====== 
 " ====================
@@ -88,16 +86,17 @@ set nowrap
 
 " クリップボード有効化
 set clipboard=unnamed,autoselect
+
 " マウス操作有効化
 set mouse=a
 
 " 色空間拡張
 " if has('nvim') || has('termguicolors')
-" 	set termguicolors
+"	 set termguicolors
 " endif
 " カラースキーム変更
-" colorscheme rupza
-colorscheme gochiusa
+colorscheme rupza
+" colorscheme gochiusa
 " シンタックスハイライトを有効化
 syntax on
 
@@ -121,9 +120,13 @@ set statusline+=[LOW=%l/%L]
 " ステータスラインを常に表示(0:表示しない、1:2つ以上ウィンドウがある時だけ表示)
 set laststatus=2
 
-" キーマップ設定
+" ==== キーマップ設定 ====
+" Ctrl-Q を ESC と同様の操作に
 noremap! <C-q> <esc>
-noremap  <C-q> <esc>
+noremap	<C-q> <esc>
+" [Insert] プレフィックスキー
+inoremap <C-f> <C-o>
+
 " 一部のCtrlと組み合わせるショートカットの有効化(sttyのvim使用時の挙動変更)
 " REF: https://vi.stackexchange.com/questions/2419/mapping-ctrls-does-not-work 
 silent !stty -ixon
