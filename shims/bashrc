@@ -23,6 +23,10 @@ if [[ -d "$HOME/.pyenv" ]]; then
 	eval "$(pyenv init -)"
 fi
 
+# ALIAS: pip
+alias pip2='pip'
+alias pip='pip3'
+
 # Alias: ls
 if type "colorls" > /dev/null 2>&1; then
 	alias ls-old='/bin/ls -aG'
