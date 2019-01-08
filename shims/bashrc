@@ -1,13 +1,17 @@
 #!/bin/bash
 
+##### ENV #####
+
+EDITOR=vim
+
 ##### PATH PRIORITY SETTINGS #####
-#  4. Homebrew (sbin)
+#  Homebrew (sbin)
 export PATH=/usr/local/sbin:$PATH
-#  3. nodebrew
+#  nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-#  2. golang
+#  golang
 export PATH=/usr/local/opt/go/libexec/bin:$PATH
-#  1. rust
+#  rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
 ##### ENV SETTINGS #####
@@ -18,10 +22,15 @@ export GOPATH="${HOME}/.golang"
 # ENV: Google Drive
 export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 
-# pyenv init 
-if [[ -d "$HOME/.pyenv" ]]; then
-	eval "$(pyenv init -)"
-fi
+# ENV: GUI Editor
+export GUI_EDITOR="code"
+
+# XXenv init 
+for anyenv in "pyenv" "rbenv" "ndenv"; do
+	if [[ -d "$HOME/.${anyenv}" ]]; then
+		eval "$(${anyenv} init -)"
+	fi
+done
 
 # ALIAS: pip
 alias pip2='pip'
@@ -47,6 +56,7 @@ alias g='git'
 
 # ALIAS: docker
 alias d='docker'
+alias dc='docker-compose'
 
 # ALIAS: ls | grep
 alias lg='/bin/ls -a1 | grep'
@@ -54,7 +64,7 @@ alias lg='/bin/ls -a1 | grep'
 # ALIAS: fzf-prev
 alias fzf-prev="fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (highlight -O ansi {}) 2> /dev/null | head -500"
 alias fv='fzf-prev'
- 
+
 # ALIAS: ghq
 if type "ghq" > /dev/null 2>&1; then
 	alias gg='ghq get'
@@ -63,6 +73,16 @@ if type "ghq" > /dev/null 2>&1; then
 		alias gls='ghq list | fzf'
 	fi
 fi
+
+# ALIAS: .rc edit by VIM
+alias bashrc="vim ~/.bashrc"
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+alias nvimrc="nvim ~/.config/nvim/init.vim"
+alias gitconfig="vim ~/.gitconfig"
+
+# ALIAS: PATH
+alias PATH="echo $PATH | tr ':' '\n'"
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
@@ -114,14 +134,13 @@ function pdfFontEmbed() {
 		echo "pdfFontEmbed: invalid arguments !"
 		echo "usage: pdfFontEmbed [pdf-file]"
 	else
-		OUT_NAME=$(echo $1 | sed -e 's#\.pdf#_embed.pdf#g')
+		OUT_NAME=$(echo -n $1 | sed -e 's#\.pdf#_embed.pdf#g')
 		echo "$1  -->  Font Embed  -->  ${OUT_NAME}"
-		gs -q -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile="${OUT_NAME}" "$1"
+		gs -q -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=\"${OUT_NAME}\" \"$1\"
 		pdffonts "${OUT_NAME}"
 	fi
-
-
 }
+
 # less with Syntax-Highlight, Line-Number
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 export LESS='-gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS -N'
