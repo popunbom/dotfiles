@@ -8,7 +8,8 @@
 [alias]
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	s = status
-	b = branch -a -vv
+	b = branch
+	br = branch -a -vv
 	f = fetch
 	c = commit
 	d = diff
