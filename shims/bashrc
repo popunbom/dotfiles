@@ -32,6 +32,10 @@ for anyenv in "pyenv" "rbenv" "ndenv"; do
 	fi
 done
 
+# ALIAS: pip
+alias pip2='pip'
+alias pip='pip3'
+
 # Alias: ls
 if type "colorls" > /dev/null 2>&1; then
 	alias ls-old='/bin/ls -aG'
