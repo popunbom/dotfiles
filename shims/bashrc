@@ -169,3 +169,9 @@ function myFileDecrypt {
 		openssl aes-256-cbc -d -in "$1" -out "${1/.encrypted/}"
 	fi
 }
+
+function dockerToolboxInit {
+	if [[ -d '/Applications/Docker/Docker Quickstart Terminal.app' ]]; then
+		bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh' 
+	fi
+}
