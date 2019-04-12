@@ -26,7 +26,7 @@ export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 export GUI_EDITOR="code"
 
 # XXenv init 
-for anyenv in "pyenv" "rbenv" "ndenv"; do
+for anyenv in "pyenv" "rbenv" "nodenv"; do
 	if [[ -d "$HOME/.${anyenv}" ]]; then
 		eval "$(${anyenv} init -)"
 	fi
@@ -42,7 +42,8 @@ if type "colorls" > /dev/null 2>&1; then
 	alias ls='colorls -a'
 	alias ll='colorls -al'
 else
-	alias ls='/bin/ls -aG'
+	alias ls='/bin/ls -Ga'
+	alias ll='/bin/ls -Gal'
 fi
 
 # ALIAS: rsync (2.6.9 -> 3.1)
@@ -53,6 +54,11 @@ alias v='vim'
 
 # ALIAS: git
 alias g='git'
+
+# ALIAS: tig
+if type "tig" > /dev/null 2>&1; then
+	alias t='tig --all'
+fi
 
 # ALIAS: docker
 alias d='docker'
@@ -81,8 +87,14 @@ alias vimrc="vim ~/.vimrc"
 alias nvimrc="nvim ~/.config/nvim/init.vim"
 alias gitconfig="vim ~/.gitconfig"
 
+# ALIAS: .dotfiles Git Repository
+alias dotfiles="cd ${HOME}/.dotfiles"
+
 # ALIAS: PATH
 alias PATH="echo $PATH | tr ':' '\n'"
+
+# ALIAS: pkill
+alias pkill="pkill -15"
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
