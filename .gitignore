@@ -1,5 +1,15 @@
 # Created by https://www.gitignore.io/api/vim,macos,windows
 
+# Ignore inside 'shims/config' dir, exclude some configs
+shims/config/*
+!shims/config/karabiner/
+!shims/config/colorls/
+!shims/config/neofetch/
+
+# Ignore NeoBundle Modules, exclude Neobundle itself
+shims/vim/bundle/*
+
+
 ### macOS ###
 # General
 .DS_Store
