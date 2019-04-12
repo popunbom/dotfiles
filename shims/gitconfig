@@ -5,6 +5,7 @@
 	email = fantom0779@gmail.com
 [core]
 	editor = vim -c \"set fenc=utf-8\"
+	quotepath = false
 [alias]
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	s = status
@@ -21,3 +22,10 @@
 	pl = pull
 	mg = merge
 	sm = submodule
+	ig = status --ignored
+	rc = commit --amend -m
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+	required = true
