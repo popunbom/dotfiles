@@ -32,6 +32,7 @@ NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'challenger-deep-theme/vim'
 NeoBundle 'felipesousa/rupza'
 NeoBundle 'yamasy1549/gochiusa.vim'
+NeoBundle 'darfink/vim-plist'
 " <=== NeoBundle Plugins
 
 call neobundle#end()
