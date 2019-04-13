@@ -6,11 +6,13 @@ EDITOR=vim
 
 ##### PATH PRIORITY SETTINGS #####
 #  Homebrew (sbin)
-export PATH=/usr/local/sbin:$PATH
+export PATH="/usr/local/sbin:$PATH"
 #  nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
+# yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #  golang
-export PATH=/usr/local/opt/go/libexec/bin:$PATH
+export PATH="/usr/local/opt/go/libexec/bin:$PATH"
 #  rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -114,11 +116,11 @@ function mkTexDoc () {
 
 	if [[ -e $DIR_NAME ]]; then
 		echo "${DIR_NAME}: already exists !"
-		subl "${DIR_NAME}" 
+		${GUI_EDITOR} "${DIR_NAME}" 
 	else
 		mkdir -v -p "$DIR_NAME/img"
 		cp -v "${PATH_RESOURCE}/Preamble.tex" "${PATH_RESOURCE}/Source.tex" "$DIR_NAME/" 
-		subl "${DIR_NAME}"
+		${GUI_EDITOR} "${DIR_NAME}"
 	fi
 }
 
@@ -134,10 +136,11 @@ function mkSemiReport() {
 
 	if [[ -e ${DIR_PATH} ]]; then
 		echo "${DIR_PATH}: already exists !"
+		${GUI_EDITOR} "${DIR_NAME}"
 	else
 		mkdir -v -p "${DIR_PATH}/img"
 		cp -v "${PATH_RESOURCE}/Preamble.tex" "${PATH_RESOURCE}/SemiReport.tex" "${DIR_PATH}/" 
-		subl "${DIR_PATH}"
+		${GUI_EDITOR} "${DIR_PATH}"
 	fi
 }
 
@@ -148,7 +151,7 @@ function pdfFontEmbed() {
 	else
 		OUT_NAME=$(echo -n $1 | sed -e 's#\.pdf#_embed.pdf#g')
 		echo "$1  -->  Font Embed  -->  ${OUT_NAME}"
-		gs -q -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=\"${OUT_NAME}\" \"$1\"
+		/usr/local/bin/gs -q -dNOPAUSE -dBATCH -dPDFSETTINGS=/prepress -sDEVICE=pdfwrite -sOutputFile=\"${OUT_NAME}\" \"$1\"
 		pdffonts "${OUT_NAME}"
 	fi
 }
