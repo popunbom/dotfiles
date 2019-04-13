@@ -6,6 +6,7 @@
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 	quotepath = false
+	autocrlf = input
 [alias]
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	s = status
@@ -22,6 +23,9 @@
 	pl = pull
 	mg = merge
 	sm = submodule
+	st = stash list
+	sts = stash save 
+	pop = stash pop 
 	ig = status --ignored
 	rc = commit --amend -m
 [filter "lfs"]

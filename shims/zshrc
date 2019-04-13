@@ -109,4 +109,3 @@ bindkey -M viins '^f' ls-fzf-open
 source ~/.zplug/repos/b4b4r07/enhancd/init.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
