@@ -1,39 +1,57 @@
 # This is Git's per-user configuration file.
+
 [user]
 # Please adapt and uncomment the following lines:
 	name = popunbom
 	email = fantom0779@gmail.com
+
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 	quotepath = false
 	autocrlf = input
+
+[pager]
+	branch = cat
+
+[diff]
+	tool = vimdiff
+
 [alias]
-	s = status
-	b = branch
-	f = fetch
+	a = add
+	b = branch -a -vv
 	c = commit
 	d = diff
+	f = fetch
 	l = log --topo-order --stat --pretty=format:\"%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B\"
-	a = add
-	br = branch -a -vv
+	s = status
+	aa = add --all
+	br = "!f(){ if type \"tig\" > /dev/null 2>&1; then tig refs; else git branch $@; fi; }; f"
 	cm = commit
 	co = checkout
 	cl = clone
-	ps = push
-	pl = pull
-	mg = merge
-	sm = submodule
+	dt = difftool -y
 	ig = status --ignored
-	rc = commit --amend -m
+	mg = merge
+	ps = push
+	pl = "!f(){ if [ \"$1\" == '--force' ] || [ \"$1\" == '-f' ]; then \
+								echo \"git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)\"; \
+								git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); \
+							else \
+								git pull $@; \
+							fi; \
+						}; f"
+	sm = submodule
 	st = stash list
+	rc = commit --amend -m
+	pop = stash pop 
 	sts = stash save 
 	stc = stash clear
-	pop = stash pop 
 	uns = reset HEAD
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	unstage = reset HEAD
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge --skip -- %f
-	process = git-lfs filter-process --skip
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
