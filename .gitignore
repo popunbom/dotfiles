@@ -1,5 +1,12 @@
 # Created by https://www.gitignore.io/api/vim,macos,windows
 
+#### iPython ####
+# History databases
+shims/ipython/profile_default/history.sqlite
+shims/ipython/profile_default/db/dhist
+# __pycache__
+shims/ipython/profile_default/startup/__pycache__/
+
 # Ignore: Preferences.sublime-settings
 Preferences.sublime-settings
 
@@ -130,3 +137,5 @@ encoding_cache.json
 !.vscode/extensions.json
 
 # End of https://www.gitignore.io/api/vim,macos,windows,sublimetext,visualstudiocode
+
+
