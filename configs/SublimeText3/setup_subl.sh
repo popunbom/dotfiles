@@ -38,7 +38,7 @@ else
 		if [[ "$answer" == "y" ]]; then
 			mv -v "${PATH_SYMLINK_TO}" "${PATH_SYMLINK_TO}.old"
 		elif [[ "$answer" == "n" ]]; then
-			rm -v "${PATH_SYMLINK_TO}"
+			rm -vRf "${PATH_SYMLINK_TO}"
 		fi
 		echo "Create symlink"
 		ln -vs "${PATH_SYMLINK_FROM}" "${PATH_SYMLINK_TO}"
