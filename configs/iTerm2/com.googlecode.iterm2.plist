@@ -990,8 +990,10 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads/Argonaut-theme/iterm-2</string>
+	<string>~/Documents</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -1001,6 +1003,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
+		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -1030,11 +1037,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>914 151 445 77 0 0 1920 1058 </string>
+	<string>914 33 445 590 0 0 1920 1058 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>650 499 620 392 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>935 623 916 423 0 0 1920 1058 </string>
+	<string>658 203 916 423 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>438 205 730 575 0 0 1920 1058 </string>
+	<string>0 1440 1680 945 0 1440 1680 923 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>268 0 730 575 0 0 1920 1080 </string>
 	<key>NeverWarnAboutShortLivedSessions_92556768-680E-496B-9EC1-6AD172A30892</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_92556768-680E-496B-9EC1-6AD172A30892_selection</key>
@@ -1623,7 +1634,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RictyDiminishedDiscordN-Regular 18</string>
+			<string>RictyDiminishedDiscordN-Regular 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2307,7 +2318,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RictyDiminishedDiscordN-Regular 18</string>
+			<string>RictyDiminishedDiscordN-Regular 16</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2398,6 +2409,8 @@
 	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
+	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>572505439.90743899</real>
 	<key>PMPrintingExpandedStateForPrint2</key>
@@ -2452,13 +2465,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-03-08T14:11:26Z</date>
+	<date>2019-05-07T06:41:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>StretchTabsToFillBar</key>
@@ -2474,7 +2487,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.2.7</string>
+	<string>3.2.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
