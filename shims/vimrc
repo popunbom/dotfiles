@@ -34,6 +34,7 @@ NeoBundle 'felipesousa/rupza'
 NeoBundle 'yamasy1549/gochiusa.vim'
 NeoBundle 'cohama/lexima.vim'
 NeoBundle 'darfink/vim-plist'
+NeoBundle 'posva/vim-vue'
 " <=== NeoBundle Plugins
 
 call neobundle#end()
