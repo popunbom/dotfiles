@@ -1,12 +1,11 @@
 #!/bin/bash
 
-# Load: ~/.bashrc_orig
-if [[ -f "$HOME/.bashrc_orig" ]]; then
-	source $HOME/.bashrc_orig
-fi
-
 # only bash
 if [[ -n "$BASH_VERSION" ]]; then
+	# Load: ~/.bashrc_orig
+	if [[ -f "$HOME/.bashrc_orig" ]]; then
+		source $HOME/.bashrc_orig
+	fi
 	# プロンプト設定
 	export PS1="\[\033[38;5;13m\][\[\033(B\033[m\]\[\033[38;5;6m\]\l\[\033(B\033[m\]\[\033[38;5;13m\]]\[\033(B\033[m\]\[\033[38;5;15m\] \[\033(B\033[m\]\[\033[38;5;14m\]\u\[\033(B\033[m\]\[\033[38;5;7m\]@\[\033(B\033[m\]\[\033[38;5;10m\]\h\[\033(B\033[m\]\[\033[38;5;15m\] \[\033(B\033[m\]\[\033[38;5;7m\]\w\[\033(B\033[m\]\[\033[38;5;15m\]\n \[\033(B\033[m\]\[\033[38;5;13m\]\$\[\033(B\033[m\]\[\033[38;5;15m\] \[\033(B\033[m\]"	
 fi
@@ -18,6 +17,18 @@ EDITOR=vim
 ##### PATH PRIORITY SETTINGS #####
 #  Homebrew (sbin)
 export PATH="/usr/local/sbin:$PATH"
+#  Linuxbrew
+if [[ $(uname) == "Linux" ]]; then
+	if [[ -d "/home/linuxbrew/.linuxbrew/bin" ]]; then
+		export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH" 
+	elif [[ -d "$HOME/.linuxbrew/bin" ]]; then
+		export PATH="$HOME/.linuxbrew/bin:$PATH" 
+	fi
+
+	if type "brew" > /dev/null 2>&1; then
+		eval $(brew shellenv)
+	fi
+fi
 #  nodebrew
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
 # yarn
