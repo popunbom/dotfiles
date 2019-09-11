@@ -15,8 +15,8 @@
 	"caret_extra_top": 2,
 	"caret_extra_width": 1,
 	"caret_style": "blink",
-	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
-	"draw_white_space": "none",
+	"color_scheme": "Packages/Colorsublime - Themes/cache/Colorsublime-Themes-master/themes/WarpOS.tmTheme",
+	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "RictyDiminishedDiscord-Regular",
 	"font_size": 17,
@@ -39,8 +39,9 @@
 	"show_full_path": true,
 	"show_line_encoding": true,
 	"show_line_endings": true,
-	"tab_size": 2,
-	"theme": "ayu-mirage.sublime-theme",
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"theme": "One Dark.sublime-theme",
 	"tree_animation_enabled": false,
 	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや"
 }
