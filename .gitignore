@@ -3,7 +3,7 @@
 #### iPython ####
 # History databases
 shims/ipython/profile_default/history.sqlite
-shims/ipython/profile_default/db/dhist
+shims/ipython/profile_default/db
 # __pycache__
 shims/ipython/profile_default/startup/__pycache__/
 
