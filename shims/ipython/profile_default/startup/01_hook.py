@@ -5,6 +5,9 @@
 
 import os
 import sys
+from mamba import imageMb
+from mamba.miscellaneous import Mamba2PIL
+from PIL import ImageFile, Image
 from common_proc import colors
 from IPython.core.magic import register_line_magic, register_line_cell_magic
 if sys.platform == 'darwin':
@@ -14,7 +17,6 @@ elif sys.platform.startswith('linux'):
 else:
     raise ImportError("Clip magic only works on osx or linux!")
 
-import matplotlib.pyplot as plt
 
 
 def _copy_to_clipboard(arg):
@@ -33,7 +35,15 @@ def _copy_to_clipboard(arg):
 
 
 def _pyplot_imshow(img):
-    if type(img) != np.ndarray:
+    if isinstance(img, imageMb):
+        img = Mamba2PIL(img)
+
+    if isinstance(img, Image.Image) or isinstance(img, ImageFile.ImageFile):
+        img = np.array(img)
+        if img.ndim == 3 and img.dtype == np.uint8:
+            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+
+    if not isinstance(img, np.ndarray):
         print(f"argument type must be numpy.ndarray, not {type(img)} !")
         return
 
