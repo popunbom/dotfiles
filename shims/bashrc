@@ -34,13 +34,11 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #  golang
-export PATH="/usr/local/opt/go/libexec/bin:$PATH"
 #  rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
 ##### ENV SETTINGS #####
 # golang
-export GOROOT="/usr/local/opt/go/libexec"
 export GOPATH="${HOME}/.golang"
 
 # ENV: Google Drive
@@ -60,11 +58,15 @@ done
 alias pip2='pip'
 alias pip='pip3'
 
-# Alias: ls
-if type "colorls" > /dev/null 2>&1; then
+# ALIAS: ipython
+alias ipy='ipython'
+alias jnb='jupyter notebook'
+
+# ALIAS: ls
+if type "lsd" > /dev/null 2>&1; then
 	alias ls-old='/bin/ls -aG'
-	alias ls='colorls -a'
-	alias ll='colorls -al'
+	alias ls='lsd -a'
+	alias ll='lsd -al'
 else
 	alias ls='/bin/ls -Ga'
 	alias ll='/bin/ls -Gal'
