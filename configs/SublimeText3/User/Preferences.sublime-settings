@@ -16,7 +16,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "blink",
 	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
-	"draw_white_space": "none",
+	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "RictyDiminishedDiscord-Regular",
 	"font_size": 17,
