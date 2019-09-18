@@ -5,18 +5,17 @@
 
 import os
 import sys
-from mamba import imageMb
-from mamba.miscellaneous import Mamba2PIL
-from PIL import ImageFile, Image
+from importlib.util import find_spec
 from common_proc import colors
 from IPython.core.magic import register_line_magic, register_line_cell_magic
+
+# System check
 if sys.platform == 'darwin':
     import subprocess
 elif sys.platform.startswith('linux'):
     from subprocess import Popen, PIPE
 else:
     raise ImportError("Clip magic only works on osx or linux!")
-
 
 
 def _copy_to_clipboard(arg):
@@ -35,16 +34,34 @@ def _copy_to_clipboard(arg):
 
 
 def _pyplot_imshow(img):
-    if isinstance(img, imageMb):
-        img = Mamba2PIL(img)
+    if find_spec('matplotlib') is None:
+        print(colors("ERROR! -- 'matplotlib' not found!", fg='red'))
+        return
+    else:
+        import matplotlib.pyplot as plt
 
-    if isinstance(img, Image.Image) or isinstance(img, ImageFile.ImageFile):
-        img = np.array(img)
-        if img.ndim == 3 and img.dtype == np.uint8:
-            img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+    if find_spec('mamba') is not None:
+        from mamba.base import imageMb
+
+        if isinstance(img, imageMb):
+            print("imageMb --> PIL")
+            from mamba.miscellaneous import Mamba2PIL
+            img = Mamba2PIL(img)
+
+    if find_spec('PIL') is not None:
+        from PIL import Image
+        from PIL.ImageFile import ImageFile
+
+        if isinstance(img, ImageFile) or isinstance(img, Image.Image):
+            print("PIL --> ndarray")
+            img = cv2.cvtColor(np.array(img), cv2.COLOR_RGB2BGR)
 
     if not isinstance(img, np.ndarray):
-        print(f"argument type must be numpy.ndarray, not {type(img)} !")
+
+        print(colors(
+            "ERROR! -- argument type must be numpy.ndarray, not {type} !".format(
+                type=type(img)
+            ), fg='red'))
         return
 
     plt.tick_params(
@@ -72,7 +89,9 @@ def imshow(line):
     img = eval(line)
 
     if img is None:
-        print(f"UndefinedVariable: '{line}'")
+        print("UndefinedVariable: {line}".format(
+            line=line
+        ))
     else:
         _pyplot_imshow(img)
 
@@ -90,5 +109,4 @@ print(
 )
 
 # We delete it to avoid name conflicts for automagic to work
-del copy
-del imshow
+del copy, imshow

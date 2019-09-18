@@ -12,7 +12,8 @@ fi
 
 ##### ENV #####
 
-EDITOR=vim
+export EDITOR=vim
+export VISUAL=vim
 
 ##### PATH PRIORITY SETTINGS #####
 #  Homebrew (sbin)
@@ -34,6 +35,7 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #  golang
+export PATH="$HOME/.golang/bin:/usr/local/opt/go/libexec/bin:$PATH"
 #  rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -41,26 +43,30 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # golang
 export GOPATH="${HOME}/.golang"
 
+# java
+if [[ $(uname) == "Darwin" ]]; then
+	export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+fi
+
 # ENV: Google Drive
 export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 
 # ENV: GUI Editor
 export GUI_EDITOR="code"
 
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
 # XXenv init 
-for anyenv in "pyenv" "rbenv" "nodenv"; do
-	if [[ -d "$HOME/.${anyenv}" ]]; then
-		eval "$(${anyenv} init -)"
+for XXenv in "pyenv" "rbenv" "nodenv" "jenv"; do
+	if [[ -d "$HOME/.${XXenv}" ]]; then
+		eval "$(${XXenv} init -)"
 	fi
 done
+
 
 # ALIAS: pip
 alias pip2='pip'
 alias pip='pip3'
-
-# ALIAS: ipython
-alias ipy='ipython'
-alias jnb='jupyter notebook'
 
 # ALIAS: ls
 if type "lsd" > /dev/null 2>&1; then
@@ -85,6 +91,12 @@ alias g='git'
 if type "tig" > /dev/null 2>&1; then
 	alias t='tig --all'
 fi
+
+# ALIAS: ipython
+alias ipy="ipython"
+
+# ALIAS: Jupyter Notebook
+alias jnb="jupyter notebook"
 
 # ALIAS: docker
 alias d='docker'
@@ -208,51 +220,51 @@ function myFileEncrypt {
 		EOS
 	}
 
-	if [[ $# == 0 || $1 == '--help' || $1 == '-h' ]]; then
-		show_usage
-	else
-		IN_FILE=$1
-		shift
-		# Parse arguments
-		for OPT in "$@"; do
-			
-			if [[ -n $OUT_FILE ]]; then
-				echo "invalid arguments !"
-				show_usage
-				return -1
-			fi
+if [[ $# == 0 || $1 == '--help' || $1 == '-h' ]]; then
+	show_usage
+else
+	IN_FILE=$1
+	shift
+	# Parse arguments
+	for OPT in "$@"; do
 
-			case $OPT in
-				'-o' )
-					USE_CUSTOM_NAME=1
-				;;
-				* )
-					if [[ ! $USE_CUSTOM_NAME ]]; then
-						echo "invalid arguments !"
-						show_usage
-						return -1
-					else
-						OUT_FILE=$1
-					fi
-				;;
-			esac
-			shift
-		done
-
-		if [[ -z $OUT_FILE ]]; then
-			echo "invalid arguments !: '-o' option requires 'out-file-name'"
+		if [[ -n $OUT_FILE ]]; then
+			echo "invalid arguments !"
+			show_usage
 			return -1
 		fi
 
+		case $OPT in
+			'-o' )
+				USE_CUSTOM_NAME=1
+				;;
+			* )
+				if [[ ! $USE_CUSTOM_NAME ]]; then
+					echo "invalid arguments !"
+					show_usage
+					return -1
+				else
+					OUT_FILE=$1
+				fi
+				;;
+		esac
+		shift
+	done
 
-		if [[ $USE_CUSTOM_NAME ]]; then
-			echo "Encrypt:  \"${IN_FILE}\"  -->  \"${OUT_FILE}\""
-			openssl aes-256-cbc -e -in "${IN_FILE}" -out "${OUT_FILE}"
-		else
-			echo "Encrypt:  \"${IN_FILE}\"  -->  \"${IN_FILE}.encrypted\""
-			openssl aes-256-cbc -e -in "${IN_FILE}" -out "${IN_FILE}.encrypted"
-		fi
+	if [[ -z $OUT_FILE ]]; then
+		echo "invalid arguments !: '-o' option requires 'out-file-name'"
+		return -1
 	fi
+
+
+	if [[ $USE_CUSTOM_NAME ]]; then
+		echo "Encrypt:  \"${IN_FILE}\"  -->  \"${OUT_FILE}\""
+		openssl aes-256-cbc -e -in "${IN_FILE}" -out "${OUT_FILE}"
+	else
+		echo "Encrypt:  \"${IN_FILE}\"  -->  \"${IN_FILE}.encrypted\""
+		openssl aes-256-cbc -e -in "${IN_FILE}" -out "${IN_FILE}.encrypted"
+	fi
+fi
 
 }
 
@@ -261,57 +273,56 @@ function myFileDecrypt {
 		cat <<- EOS
 
 		usage: myFileDecrypt encrypted-file [-o out-file-path]
-		  - Decrypt file by openssl. 
-		  - Decrypted file outputs to stdout unless '-o' option.
+			- Decrypt file by openssl. 
+			- Decrypted file outputs to stdout unless '-o' option.
 
 		EOS
 	}
 
-	if [[ $# == 0 || $1 == '--help' || $1 == '-h' ]]; then
-		show_usage
-	else
-		IN_FILE=$1
-		OUT_TO="stdout"
-		shift
-		# Parse arguments
-		for OPT in "$@"; do
-			
-			if [[ -n $OUT_FILE ]]; then
-				echo "invalid arguments !"
-				show_usage
-				return -1
-			fi
+if [[ $# == 0 || $1 == '--help' || $1 == '-h' ]]; then
+	show_usage
+else
+	IN_FILE=$1
+	OUT_TO="stdout"
+	shift
+	# Parse arguments
+	for OPT in "$@"; do
 
-	    case $OPT in
-	      '-o' )
-					OUT_TO="file"
-				;;
-				* )
-					if [[ $OUT_TO != "file" ]]; then
-						echo "invalid arguments !"
-						show_usage
-						return -1
-					else
-	        	OUT_FILE=$1
-					fi
-	      ;;
-	    esac
-	    shift
-		done
-
-	  if [[ $OUT_TO == "file" && -z $OUT_FILE ]]; then
-			echo "invalid arguments !: '-o' option requires 'out-file-name'"
+		if [[ -n $OUT_FILE ]]; then
+			echo "invalid arguments !"
+			show_usage
 			return -1
 		fi
 
-		if [[ "$OUT_TO" == "stdout" ]]; then
-			openssl aes-256-cbc -d -in "${IN_FILE}"
-		elif [[ "$OUT_TO" == "file" ]]; then
-			echo "Decrypted: ${IN_FILE}  -->  ${IN_FILE/.encrypted/}"
-			openssl aes-256-cbc -d -in "${IN_FILE}" -out "${IN_FILE/.encrypted/}"
-		fi
+		case $OPT in
+			'-o' )
+				OUT_TO="file"
+				;;
+			* )
+				if [[ $OUT_TO != "file" ]]; then
+					echo "invalid arguments !"
+					show_usage
+				else
+					OUT_FILE=$1
+				fi
+				;;
+		esac
+		shift
+	done
 
+	if [[ $OUT_TO == "file" && -z $OUT_FILE ]]; then
+		echo "invalid arguments !: '-o' option requires 'out-file-name'"
+		return -1
 	fi
+
+	if [[ "$OUT_TO" == "stdout" ]]; then
+		openssl aes-256-cbc -d -in "${IN_FILE}"
+	elif [[ "$OUT_TO" == "file" ]]; then
+		echo "Decrypted: ${IN_FILE}  -->  ${IN_FILE/.encrypted/}"
+		openssl aes-256-cbc -d -in "${IN_FILE}" -out "${IN_FILE/.encrypted/}"
+	fi
+
+fi
 }
 
 function dockerToolboxInit {
@@ -319,4 +330,24 @@ function dockerToolboxInit {
 		bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh' 
 	fi
 }
+
+function mov2gif {
+	if type "ffmpeg" > /dev/null 2>&1; then
+		if [[ $# != 1 || $1 == '--help' || $1 == '-h' ]]; then
+			cat <<- EOS
+			usage: mov2gif mov-file 
+				- Convert .mov to GIF animation (fps = 15)
+			EOS
+		else
+			if [[ -e $1 ]]; then
+				ffmpeg -i "$1" -r 15 "${1/mov/gif}"
+			else
+				echo "Error! -- file not found: $1"
+			fi
+		fi
+	else
+		echo "Error! -- 'ffmpeg' not found"
+	fi
+}
+
 

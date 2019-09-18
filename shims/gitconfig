@@ -46,9 +46,9 @@
 	pop = stash pop 
 	sts = stash save 
 	stc = stash clear
-	uns = reset HEAD
+	uns = reset HEAD^
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
-	unstage = reset HEAD
+	unstage = reset HEAD^
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f

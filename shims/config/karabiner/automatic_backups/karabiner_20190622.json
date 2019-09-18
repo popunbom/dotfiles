@@ -16,17 +16,9 @@
                 },
                 "rules": [
                     {
-                        "description": "[PyCharm] Change ¥ to Alt+¥",
+                        "description": "Change ¥ to Alt+¥",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.jetbrains\\..*"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "international3"
                                 },
