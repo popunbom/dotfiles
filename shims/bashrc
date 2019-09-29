@@ -41,7 +41,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 ##### ENV SETTINGS #####
 # golang
-export GOROOT="/usr/local/opt/go/libexec"
 export GOPATH="${HOME}/.golang"
 
 # java
@@ -58,17 +57,18 @@ export GUI_EDITOR="code"
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 # XXenv init 
-for anyenv in "pyenv" "rbenv" "nodenv" "jenv"; do
-	if [[ -d "$HOME/.${anyenv}" ]]; then
-		eval "$(${anyenv} init -)"
+for XXenv in "pyenv" "rbenv" "nodenv" "jenv"; do
+	if [[ -d "$HOME/.${XXenv}" ]]; then
+		eval "$(${XXenv} init -)"
 	fi
 done
+
 
 # ALIAS: pip
 alias pip2='pip'
 alias pip='pip3'
 
-# Alias: ls
+# ALIAS: ls
 if type "lsd" > /dev/null 2>&1; then
 	alias ls-old='/bin/ls -aG'
 	alias ls='lsd -a'
@@ -93,13 +93,10 @@ if type "tig" > /dev/null 2>&1; then
 fi
 
 # ALIAS: ipython
-if type "ipython" > /dev/null 2>&1; then
-	alias ipy="ipython"
-fi
+alias ipy="ipython"
+
 # ALIAS: Jupyter Notebook
-if type "jupyter" > /dev/null 2>&1; then
-	alias jnb="jupyter notebook"
-fi
+alias jnb="jupyter notebook"
 
 # ALIAS: docker
 alias d='docker'

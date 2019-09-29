@@ -10,6 +10,8 @@ IMPORT_LIBS = [
     ('numpy', 'np'),
     ('os', None),
     ('sys', None),
+    ('matplotlib', 'mpl'),
+    ('matplotlib.pyplot', 'plt')
 ]
 
 
