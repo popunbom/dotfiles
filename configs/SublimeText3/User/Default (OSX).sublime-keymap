@@ -55,33 +55,5 @@
             "encoding": "UTF-8",
             "stamp": "0" 
         } 
-    },
-
-    // Find None
-    {
-        "keys": ["enter"],
-        "command": "nothing",
-        "context":[
-            {
-                "key": "panel",
-                "operand": "find"
-            }, 
-            {
-                "key": "panel_has_focus"
-            }
-        ]
-    },
-    {
-        "keys": ["shift+enter"],
-        "command": "nothing",
-        "context":[
-            {
-                "key": "panel",
-                "operand": "find"
-            }, 
-            {
-                "key": "panel_has_focus"
-            }
-        ]
-    },
+    }
 ]
