@@ -9,5 +9,13 @@
 	{ "keys": ["alt+shift+right"], "command": "move", "args": {"by": "subword_ends", "forward": true, "extend": true} },
 
 	// Prevent unpredicted charset convert
-	{ "keys": ["super+shift+c"], "command": "convert_to_utf8", "args": {"encoding": "UTF-8", "stamp": "0" } }
+	{ "keys": ["super+shift+c"], "command": "convert_to_utf8", "args": {"encoding": "UTF-8", "stamp": "0" } },
+
+    // Find None
+    { "keys": ["enter"], "command": "nothing", "context":
+        [{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+    },
+    { "keys": ["shift+enter"], "command": "nothing", "context":
+        [{"key": "panel", "operand": "find"}, {"key": "panel_has_focus"}]
+    },
 ]
