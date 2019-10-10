@@ -137,27 +137,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "Fn -> h",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "any": "key_code",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "h"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
