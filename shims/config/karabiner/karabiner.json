@@ -151,7 +151,6 @@
                                     }
                                 },
                                 "to": {
-                                    "any": "key_code",
                                     "modifiers": [
                                         "option"
                                     ]
@@ -172,7 +171,7 @@
                         "product_id": 615,
                         "vendor_id": 76
                     },
-                    "ignore": false,
+                    "ignore": true,
                     "manipulate_caps_lock_led": true,
                     "simple_modifications": []
                 },
@@ -199,7 +198,7 @@
                         "vendor_id": 1241
                     },
                     "ignore": false,
-                    "manipulate_caps_lock_led": false,
+                    "manipulate_caps_lock_led": true,
                     "simple_modifications": [
                         {
                             "from": {
