@@ -139,7 +139,7 @@
                         ]
                     },
                     {
-                        "description": "Fn -> option",
+                        "description": "Fn -> h",
                         "manipulators": [
                             {
                                 "from": {
@@ -150,11 +150,11 @@
                                         ]
                                     }
                                 },
-                                "to": {
-                                    "modifiers": [
-                                        "option"
-                                    ]
-                                },
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "h"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -171,7 +171,7 @@
                         "product_id": 615,
                         "vendor_id": 76
                     },
-                    "ignore": true,
+                    "ignore": false,
                     "manipulate_caps_lock_led": true,
                     "simple_modifications": []
                 },
