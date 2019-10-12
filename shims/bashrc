@@ -93,7 +93,7 @@ if type "tig" > /dev/null 2>&1; then
 fi
 
 # ALIAS: ipython
-alias ipy="ipython"
+alias ipy="ipython --profile=imgproc"
 
 # ALIAS: Jupyter Notebook
 alias jnb="jupyter notebook"
