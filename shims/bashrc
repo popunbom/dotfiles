@@ -134,6 +134,9 @@ alias PATH="echo $PATH | tr ':' '\n'"
 # ALIAS: pkill
 alias pkill="pkill -15"
 
+# ALIAS: jq | fzf
+alias jqfzf="jq -C | fzf --ansi"
+
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
 # alias manp='man -t \!* | ps2pdf - /tmp/man_\!$.pdf && open -a Skim /tmp/man_\!$.pdf'

@@ -139,7 +139,41 @@
                         ]
                     },
                     {
-                        "description": "Cmd+[ → Cmd+Shift+[",
+                        "description": "⌘⇧I → ⌘⌥I",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "i",
+                                        "modifiers": [
+                                            "command",
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "⌘[ → ⌘⇧[",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -172,7 +206,7 @@
                         ]
                     },
                     {
-                        "description": "Cmd+] → Cmd+Shift+]",
+                        "description": "⌘] → ⌘⇧]",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -205,7 +239,7 @@
                         ]
                     },
                     {
-                        "description": "Cmd+Shift+[ → Cmd+[",
+                        "description": "⌘⇧[ → ⌘[",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -238,7 +272,7 @@
                         ]
                     },
                     {
-                        "description": "Cmd+Shift+] → Cmd+]",
+                        "description": "⌘⇧] → ⌘]",
                         "manipulators": [
                             {
                                 "conditions": [
