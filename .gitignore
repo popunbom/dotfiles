@@ -19,6 +19,9 @@ shims/config/*
 # Ignore NeoBundle Modules, exclude Neobundle itself
 shims/vim/bundle/*
 
+# Ignore 'automatic_backups' of Karabiner-Element
+shims/config/karabiner/automatic_backups
+
 
 ### macOS ###
 # General
