@@ -65,8 +65,6 @@ done
 
 
 # ALIAS: pip
-alias pip2='pip'
-alias pip='pip3'
 
 # ALIAS: ls
 if type "lsd" > /dev/null 2>&1; then
