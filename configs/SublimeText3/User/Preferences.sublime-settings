@@ -18,8 +18,8 @@
 	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
-	"font_face": "RictyDiminishedDiscord-Regular",
-	"font_size": 15,
+	"font_face": "Cica",
+	"font_size": 16,
 	"highlight_line": true,
 	"ignored_packages":
 	[
