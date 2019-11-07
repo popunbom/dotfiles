@@ -42,6 +42,9 @@ setopt globdots
 # Customize: zsh-autosuggestion
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 
+# Customize: enhancd
+ENHANCD_FILTER=fzf:fzy:peco
+
 
 # Enable Vi-Edit Mode in ZLE(zsh-line-edit)
 # REF: https://qiita.com/b4b4r07/items/8db0257d2e6f6b19ecb9
@@ -87,7 +90,7 @@ fi
 
 
 # fzf を使って History 検索
-function select-history() {
+function select-history-fzf() {
 	if type "fzf" > /dev/null 2>&1; then
 		BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="[History] > ")
 		CURSOR=$#BUFFER
@@ -101,8 +104,25 @@ function select-history() {
 		fi
 	fi
 }
-zle -N select-history
-bindkey -M viins '^r' select-history
+# fzy を使って History 検索
+function select-history-fzy() {
+	if type "fzf" > /dev/null 2>&1; then
+		BUFFER=$(history -n -r 1 | fzy --query "$LBUFFER" --prompt="[History] > ")
+		CURSOR=$#BUFFER
+
+		zle reset-prompt
+	else
+		read -p "'fzy' is not found. Do you install 'fzy' from Homebrew [y/n] ? " answer < /dev/tty
+		while [[ "$answer" != "y" && "$answer" != "n" ]]; do
+			read -p "'Please input 'y' or 'n': " answer < /dev/tty
+		done
+		if [[ "$answer" == "y" ]]; then
+			brew install fzy
+		fi
+	fi
+}
+zle -N select-history-fzf
+bindkey -M viins '^r' select-history-fzf
 
 # ls -1 -> fzf -> open
 function ls-fzf-open() {

@@ -66,8 +66,6 @@ export GUI_EDITOR="code"
 
 
 # ALIAS: pip
-alias pip2='pip'
-alias pip='pip3'
 
 # ALIAS: ls
 if type "lsd" > /dev/null 2>&1; then
@@ -94,7 +92,7 @@ if type "tig" > /dev/null 2>&1; then
 fi
 
 # ALIAS: ipython
-alias ipy="ipython"
+alias ipy="ipython --profile=imgproc"
 
 # ALIAS: Jupyter Notebook
 alias jnb="jupyter notebook"
