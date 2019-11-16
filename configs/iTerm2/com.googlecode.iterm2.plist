@@ -52872,6 +52872,21 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x2b-0x120000</key>
+		<dict>
+			<key>Action</key>
+			<integer>25</integer>
+			<key>Text</key>
+			<string>Make Text Bigger
+Make Text Bigger</string>
+		</dict>
+		<key>0x3b-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>13</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x66-0x140000</key>
 		<dict>
 			<key>Action</key>
@@ -53055,7 +53070,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>299 1378 928 394 0 1080 1440 788 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>600 301 730 525 0 0 1920 1057 </string>
+	<string>0 1359 730 508 0 1080 1440 787 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1 536 1182 501 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -54248,7 +54263,7 @@
 			<key>HotKey Window Animates</key>
 			<false/>
 			<key>HotKey Window AutoHides</key>
-			<true/>
+			<false/>
 			<key>HotKey Window Dock Click Action</key>
 			<integer>0</integer>
 			<key>HotKey Window Floats</key>
@@ -54912,9 +54927,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1920, 1080}}</string>
+		<string>{{0, 1080}, {1440, 810}}</string>
 		<key>topLeft</key>
-		<string>{330, 942}</string>
+		<string>{289, 1722}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -54923,7 +54938,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>985E9623-D97C-4565-AC6F-9A1D661A3DCC</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>82</integer>
+	<integer>88</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -55727,7 +55742,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-22T02:38:31Z</date>
+	<date>2019-11-15T13:00:39Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
