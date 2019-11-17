@@ -132,13 +132,15 @@ function prompt_paradox_start_segment {
   else
     print -n "$bg$fg "
   fi
-  [[ "$1" == "default" ]] && _prompt_paradox_current_bg="bg-default" || _prompt_paradox_current_bg="$1"
+  _prompt_paradox_current_bg="$1"
   [[ -n "$3" ]] && print -n "$3"
 }
 function paradox_customize {
+  STATUS='%(?::%F{red}✘ )%(!:%F{yellow}⚡ :)%(1j:%F{cyan}⚙ :)'
+  USER_NAME='%B%F{222}%n%F{202}@%F{114}%m%f%b'
   # prompt_paradox_start_segment [bg-color] [fg-color]
-  prompt_paradox_start_segment 240 255 '%(?::%F{red}✘ )%(!:%F{yellow}⚡ :)%(1j:%F{cyan}⚙ :)%F{blue}%n%F{red}@%F{green}%m%f'
-  prompt_paradox_start_segment 069 white '$_prompt_paradox_pwd'
+  prompt_paradox_start_segment 240 255 "${STATUS}${USER_NAME}"
+  prompt_paradox_start_segment 069 255 '$_prompt_paradox_pwd'
 
   if [[ -n "$git_info" ]]; then
     prompt_paradox_start_segment green black '${(e)git_info[ref]}${(e)git_info[status]}'
