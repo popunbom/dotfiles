@@ -137,7 +137,7 @@ function prompt_paradox_start_segment {
 }
 function paradox_customize {
   STATUS='%(?::%F{red}✘ )%(!:%F{yellow}⚡ :)%(1j:%F{cyan}⚙ :)'
-  USER_NAME='%B%F{222}%n%F{202}@%F{114}%m%f%b'
+  USER_NAME='%F{222}%B%n%b%F{202}@%F{114}%m%f'
   # prompt_paradox_start_segment [bg-color] [fg-color]
   prompt_paradox_start_segment 240 255 "${STATUS}${USER_NAME}"
   prompt_paradox_start_segment 069 255 '$_prompt_paradox_pwd'
