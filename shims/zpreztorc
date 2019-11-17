@@ -122,6 +122,19 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 zstyle ':prezto:module:prompt' theme 'paradox'
 
 # paradox -- Customize
+function prompt_paradox_start_segment {
+  local bg fg
+  [[ -n "$1" ]] && bg="%K{$1}" || bg="%k"
+  [[ -n "$2" ]] && fg="%F{$2}" || fg="%f"
+
+  if [[ "$_prompt_paradox_current_bg" != 'NONE' && "$1" != "$_prompt_paradox_current_bg" ]]; then
+    print -n " $bg%F{$_prompt_paradox_current_bg}$_prompt_paradox_segment_separator$fg "
+  else
+    print -n "$bg$fg "
+  fi
+  [[ "$1" == "default" ]] && _prompt_paradox_current_bg="049" || _prompt_paradox_current_bg="$1"
+  [[ -n "$3" ]] && print -n "$3"
+}
 function paradox_customize {
   # prompt_paradox_start_segment [bg-color] [fg-color]
   prompt_paradox_start_segment default default '%(?::%F{red}✘ )%(!:%F{yellow}⚡ :)%(1j:%F{cyan}⚙ :)%F{blue}%n%F{red}@%F{green}%m%f'
