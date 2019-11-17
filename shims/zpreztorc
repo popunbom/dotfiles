@@ -132,7 +132,7 @@ function prompt_paradox_start_segment {
   else
     print -n "$bg$fg "
   fi
-  [[ "$1" == "default" ]] && _prompt_paradox_current_bg="049" || _prompt_paradox_current_bg="$1"
+  [[ "$1" == "default" ]] && _prompt_paradox_current_bg="bg-default" || _prompt_paradox_current_bg="$1"
   [[ -n "$3" ]] && print -n "$3"
 }
 function paradox_customize {
