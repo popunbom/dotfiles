@@ -121,6 +121,10 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # zstyle ':prezto:module:prompt' theme 'sorin'
 zstyle ':prezto:module:prompt' theme 'paradox'
 
+# Prezto のテーマ 'paradox' 使用時に上に1行
+# 空白が発生するのを防ぐため、PROMPT 環境変数
+# を上書きする
+PROMPT="${(e)$(prompt_paradox_build_prompt)}"$('\n')"${editor_info[keymap]} "
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
