@@ -130,7 +130,7 @@ alias dotfiles="cd ${HOME}/.dotfiles"
 alias PATH="echo $PATH | tr ':' '\n'"
 
 # ALIAS: pkill
-alias pkill="pkill -15"
+alias pkill="pkill -9"
 
 # ALIAS: jq | fzf
 alias jqfzf="jq -C | fzf --ansi"
