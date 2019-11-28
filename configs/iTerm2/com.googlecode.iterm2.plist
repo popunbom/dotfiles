@@ -55006,11 +55006,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-<<<<<<< HEAD
-		<string>{320, 730}</string>
-=======
 		<string>{330, 942}</string>
->>>>>>> 57fb752c018035bccd8d784f075888e180c86ba4
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -55019,11 +55015,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>985E9623-D97C-4565-AC6F-9A1D661A3DCC</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-<<<<<<< HEAD
-	<integer>7</integer>
-=======
 	<integer>82</integer>
->>>>>>> 57fb752c018035bccd8d784f075888e180c86ba4
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
