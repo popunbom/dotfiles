@@ -2,12 +2,9 @@
 
 #### iPython ####
 # History databases
-shims/ipython/profile_default/history.sqlite
-shims/ipython/profile_imgproc/history.sqlite
-shims/ipython/profile_default/db
-shims/ipython/profile_imgproc/db
-__pycache__
-shims/ipython/profile_default/startup/__pycache__/
+shims/ipython/profile_*
+!shims/ipython/profile_*/startup
+shims/ipython/profile_*/startup/__pycache__
 
 # Ignore: Preferences.sublime-settings
 Preferences.sublime-settings
