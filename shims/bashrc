@@ -16,9 +16,19 @@ export EDITOR=vim
 export VISUAL=vim
 
 ##### PATH PRIORITY SETTINGS #####
-#  Homebrew (sbin)
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+# XXenv init 
+for XXenv in "pyenv" "rbenv" "nodenv" "jenv"; do
+	if [[ -d "$HOME/.${XXenv}" ]]; then
+		eval "$(${XXenv} init -)"
+	fi
+done
+
+# Homebrew (sbin)
 export PATH="/usr/local/sbin:$PATH"
-#  Linuxbrew
+
+# Linuxbrew
 if [[ $(uname) == "Linux" ]]; then
 	if [[ -d "/home/linuxbrew/.linuxbrew/bin" ]]; then
 		export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH" 
@@ -53,15 +63,6 @@ export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 
 # ENV: GUI Editor
 export GUI_EDITOR="code"
-
-# jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-# XXenv init 
-for XXenv in "pyenv" "rbenv" "nodenv" "jenv"; do
-	if [[ -d "$HOME/.${XXenv}" ]]; then
-		eval "$(${XXenv} init -)"
-	fi
-done
 
 
 # ALIAS: pip
@@ -333,7 +334,8 @@ function dockerToolboxInit {
 }
 
 function mov2gif {
-	if type "ffmpeg" > /dev/null 2>&1; then
+	BINARY="/usr/local/bin/ffmpeg"
+	if type ${BINARY} > /dev/null 2>&1; then
 		if [[ $# != 1 || $1 == '--help' || $1 == '-h' ]]; then
 			cat <<- EOS
 			usage: mov2gif mov-file 
@@ -341,7 +343,7 @@ function mov2gif {
 			EOS
 		else
 			if [[ -e $1 ]]; then
-				ffmpeg -i "$1" -r 15 "${1/mov/gif}"
+				${BINARY} -i "$1" -r 15 "${1/mov/gif}"
 			else
 				echo "Error! -- file not found: $1"
 			fi
