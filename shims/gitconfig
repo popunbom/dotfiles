@@ -43,7 +43,7 @@
 	sm = submodule
 	st = stash list
 	rc = commit --amend -m
-	pop = stash pop 
+	pop = stash apply 
 	sts = stash save 
 	stc = stash clear
 	uns = reset HEAD^
