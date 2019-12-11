@@ -1,7 +1,9 @@
 # Created by https://www.gitignore.io/api/vim,macos,windows
 
+### PtPython ###
 shims/ptpython/*
 !shims/ptpython/config.py
+
 #### iPython ####
 # History databases
 shims/ipython/profile_*
