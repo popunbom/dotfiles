@@ -94,6 +94,10 @@ fi
 # ALIAS: ipython
 alias ipy="ipython --profile=imgproc"
 
+# ALIAS: ptpython, ptipython
+alias ptp="ptpython"
+alias pti="ptipython"
+
 # ALIAS: Jupyter Notebook
 alias jnb="jupyter notebook"
 
