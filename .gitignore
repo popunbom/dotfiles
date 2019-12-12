@@ -1,11 +1,14 @@
 # Created by https://www.gitignore.io/api/vim,macos,windows
 
+### PtPython ###
+shims/ptpython/*
+!shims/ptpython/config.py
+
 #### iPython ####
 # History databases
-shims/ipython/profile_default/history.sqlite
-shims/ipython/profile_default/db
-__pycache__
-shims/ipython/profile_default/startup/__pycache__/
+shims/ipython/profile_*
+!shims/ipython/profile_*/startup
+shims/ipython/profile_*/startup/__pycache__
 
 # Ignore: Preferences.sublime-settings
 Preferences.sublime-settings

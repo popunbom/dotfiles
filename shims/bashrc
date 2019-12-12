@@ -94,6 +94,10 @@ fi
 # ALIAS: ipython
 alias ipy="ipython --profile=imgproc"
 
+# ALIAS: ptpython, ptipython
+alias ptp="ptpython"
+alias pti="ptipython"
+
 # ALIAS: Jupyter Notebook
 alias jnb="jupyter notebook"
 
@@ -131,7 +135,7 @@ alias dotfiles="cd ${HOME}/.dotfiles"
 alias PATH="echo $PATH | tr ':' '\n'"
 
 # ALIAS: pkill
-alias pkill="pkill -15"
+alias pkill="pkill -9"
 
 # ALIAS: jq | fzf
 alias jqfzf="jq -C | fzf --ansi"
@@ -343,7 +347,7 @@ function mov2gif {
 			EOS
 		else
 			if [[ -e $1 ]]; then
-				${BINARY} -i "$1" -r 15 "${1/mov/gif}"
+				${BINARY} -i "$1" -vf scale=1280:-1 -r 15 "${1/mov/gif}"
 			else
 				echo "Error! -- file not found: $1"
 			fi
