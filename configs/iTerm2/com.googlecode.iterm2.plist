@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<false/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -52989,7 +52991,7 @@ Make Text Bigger</string>
 	<key>HideActivityIndicator</key>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
-	<false/>
+	<true/>
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
@@ -53068,7 +53070,7 @@ Make Text Bigger</string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>299 1378 928 394 0 1080 1440 788 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>222 124 1261 508 0 0 1920 1057 </string>
+	<string>0 2 937 1055 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1 536 1182 501 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -53794,6 +53796,8 @@ Make Text Bigger</string>
 			<false/>
 			<key>Shortcut</key>
 			<string></string>
+			<key>Show Mark Indicators</key>
+			<false/>
 			<key>Show Status Bar</key>
 			<true/>
 			<key>Silence Bell</key>
@@ -55006,6 +55010,7 @@ Make Text Bigger</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
+		<string>3.3.7</string>
 		<string>3.2.9</string>
 		<string>3.3.0</string>
 		<string>3.3.4</string>
@@ -55032,7 +55037,7 @@ Make Text Bigger</string>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{580, 945}</string>
+		<string>{542, 664}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -55041,7 +55046,7 @@ Make Text Bigger</string>
 	<key>NoSyncInstallationId</key>
 	<string>985E9623-D97C-4565-AC6F-9A1D661A3DCC</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>90</integer>
+	<integer>104</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -55845,11 +55850,11 @@ Make Text Bigger</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-11-18T13:00:44Z</date>
+	<date>2019-12-14T03:09:52Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
-	<true/>
+	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<true/>
 	<key>ShowBookmarkName</key>
@@ -55873,7 +55878,7 @@ Make Text Bigger</string>
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabStyleWithAutomaticOption</key>
-	<integer>1</integer>
+	<integer>6</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TabsHaveCloseButton</key>
@@ -55893,7 +55898,7 @@ Make Text Bigger</string>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.6</string>
+	<string>3.3.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
