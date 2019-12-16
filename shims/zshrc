@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-echo "Load: ~/.zshrc"
-
 ####################### zplug ###############################
 source "${HOME}/.zplug/init.zsh"
 
@@ -12,6 +10,43 @@ zplug "b4b4r07/enhancd", use:init.sh
 zplug load 
 # zplug load --verbose
 ####################### zplug ###############################
+
+
+####################### prezto ###############################
+# Override Prompt
+function prompt_paradox_start_segment {
+  local bg fg
+  [[ -n "$1" ]] && bg="%K{$1}" || bg="%k"
+  [[ -n "$2" ]] && fg="%F{$2}" || fg="%f"
+
+  if [[ "$_prompt_paradox_current_bg" != 'NONE' && "$1" != "$_prompt_paradox_current_bg" ]]; then
+    print -n " $bg%F{$_prompt_paradox_current_bg}$_prompt_paradox_segment_separator$fg "
+  else
+    print -n "$bg$fg "
+  fi
+  _prompt_paradox_current_bg="$1"
+  [[ -n "$3" ]] && print -n "$3"
+}
+function paradox_customize {
+  STATUS='%(?::%F{red}✘ )%(!:%F{yellow}⚡ :)%(1j:%F{cyan}⚙ :)'
+  USER_NAME='%F{222}%B%n%b%F{202}@%F{114}%m%f'
+  # prompt_paradox_start_segment [bg-color] [fg-color]
+  prompt_paradox_start_segment 240 255 "${STATUS}${USER_NAME}"
+  prompt_paradox_start_segment 069 255 '$_prompt_paradox_pwd'
+
+  if [[ -n "$git_info" ]]; then
+    prompt_paradox_start_segment green black '${(e)git_info[ref]}${(e)git_info[status]}'
+  fi
+
+  if [[ -n "$python_info" ]]; then
+    prompt_paradox_start_segment white black '${(e)python_info[virtualenv]}'
+  fi
+
+  prompt_paradox_end_segment
+}
+PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
+
+####################### prezto ###############################
 
 # Enable: zsh-completions
 if [ -e "/usr/local/share/zsh-completions" ]; then
