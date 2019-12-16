@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "Load: ~/.bashrc"
 
 # only bash
 if [[ -n "$BASH_VERSION" ]]; then

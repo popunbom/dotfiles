@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 
-echo "Load: ~/.zshrc"
 
 #######################  zplug ###############################
 source "${HOME}/.zplug/init.zsh"

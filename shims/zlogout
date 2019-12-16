@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 
-echo "Load: ~/.zlogout"
 
 #
 # Executes commands at logout.
