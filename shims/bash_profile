@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Load: ~/.bash_profile"
 # .bash_profile: 全ユーザーに適応される bash 設定ファイル
 
 # .bashrc 読み込み
