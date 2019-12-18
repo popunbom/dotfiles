@@ -77,9 +77,6 @@ else
 	alias ll='/bin/ls -Gal'
 fi
 
-# ALIAS: rsync (2.6.9 -> 3.1)
-alias rsync='rsync3.1'
-
 # ALIAS: vim
 alias v='vim'
 
