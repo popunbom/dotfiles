@@ -7,6 +7,8 @@ zplug "sorin-ionescu/prezto"
 
 zplug "b4b4r07/enhancd", use:init.sh
 
+zplug "Tarrasch/zsh-autoenv"
+
 zplug load 
 # zplug load --verbose
 
