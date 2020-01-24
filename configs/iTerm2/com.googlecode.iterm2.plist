@@ -53072,7 +53072,7 @@ Make Text Bigger</string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>299 1378 928 394 0 1080 1440 788 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1876 1057 0 0 1920 1080 </string>
+	<string>0 0 1920 1080 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1 536 1182 501 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -53767,7 +53767,7 @@ Make Text Bigger</string>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>0</integer>
+			<integer>2000</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -54052,7 +54052,7 @@ Make Text Bigger</string>
 			<key>Unicode Version</key>
 			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
-			<true/>
+			<false/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -54997,7 +54997,7 @@ Make Text Bigger</string>
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.1000000000000001</real>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -55039,7 +55039,7 @@ Make Text Bigger</string>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{137, 1008}</string>
+		<string>{295, 872}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -55048,7 +55048,7 @@ Make Text Bigger</string>
 	<key>NoSyncInstallationId</key>
 	<string>985E9623-D97C-4565-AC6F-9A1D661A3DCC</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>107</integer>
+	<integer>120</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -55789,6 +55789,9 @@ Make Text Bigger</string>
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>cleanup</string>
+		<string>CustomPool._clean</string>
+		<string>Called</string>
 		<string>-prune</string>
 		<string>-pro</string>
 	</array>
@@ -55852,7 +55855,7 @@ Make Text Bigger</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-12-22T03:16:39Z</date>
+	<date>2020-01-22T06:07:35Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
