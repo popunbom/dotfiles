@@ -49,6 +49,11 @@ export PATH="$HOME/.golang/bin:/usr/local/opt/go/libexec/bin:$PATH"
 #  rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# User's /bin Path (recursively)
+for bin_dir in $HOME/.bin/*; do
+	echo export PATH="$PATH:${bin_dir// /\\ }"
+done
+
 ##### ENV SETTINGS #####
 # golang
 export GOPATH="${HOME}/.golang"
