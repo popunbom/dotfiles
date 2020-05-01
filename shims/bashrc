@@ -51,7 +51,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # User's /bin Path (recursively)
 for bin_dir in $HOME/.bin/*; do
-	echo export PATH="$PATH:${bin_dir// /\\ }"
+	export PATH="$PATH:${bin_dir// /\\ }"
 done
 
 ##### ENV SETTINGS #####
