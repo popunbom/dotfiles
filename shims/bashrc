@@ -50,9 +50,9 @@ export PATH="$HOME/.golang/bin:/usr/local/opt/go/libexec/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # User's /bin Path (recursively)
-for bin_dir in $HOME/.bin/*; do
-	export PATH="$PATH:${bin_dir// /\\ }"
-done
+export PATH="$PATH:$(find $HOME/.bin -type d | tr $'\n' ':' | rev | cut -c 2- | rev)"
+
+
 
 ##### ENV SETTINGS #####
 # golang
