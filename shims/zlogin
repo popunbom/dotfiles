@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-echo "Load zlogin"
-
 #
 # Executes commands at login post-zshrc.
 #
@@ -28,5 +26,3 @@ echo "Load zlogin"
   fi
 
 } >&2
-
-echo "End of zlogin"

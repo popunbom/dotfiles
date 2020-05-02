@@ -1,11 +1,7 @@
 #!/usr/bin/env zsh
 
-echo "Load zshrc"
-
 #######################  zplug ###############################
-echo ">> start: source ${HOME}/.zplug/init.zsh"
 source "${HOME}/.zplug/init.zsh"
-echo ">>   end: source ${HOME}/.zplug/init.zsh"
 
 zplug "sorin-ionescu/prezto"
 
@@ -56,7 +52,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
 # Customize: enhancd
 ENHANCD_FILTER=fzf:fzy:peco
 
-
 # Enable Vi-Edit Mode in ZLE(zsh-line-edit)
 # REF: https://qiita.com/b4b4r07/items/8db0257d2e6f6b19ecb9
 bindkey -v
@@ -70,10 +65,9 @@ bindkey -M viins '^L' clear-screen
 bindkey -M viins '^U' kill-whole-line
 
 
-# Import from .bashrc
-echo ">> start: source ${HOME}/.bashrc"
+#################### Import from .bashrc #################
 source ${HOME}/.bashrc
-echo ">>   end: source ${HOME}/.bashrc"
+#################### Import from .bashrc #################
 
 
 # ALIAS: Ghostscript
@@ -139,16 +133,9 @@ zle -N ls-fzf-open
 bindkey -M viins '^f' ls-fzf-open
 
 
-echo ">> start: source ~/.zplug/repos/b4b4r07/enhancd/init.sh"
 source ~/.zplug/repos/b4b4r07/enhancd/init.sh
-echo ">>   end: source ~/.zplug/repos/b4b4r07/enhancd/init.sh"
 
-# echo ">> start: source ${HOME}/.iterm2_shell_integration.zsh"
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-# echo ">>   end: source ${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-echo "End of zshrc"
-
 
