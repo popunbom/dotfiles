@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-echo "Load zprofile"
-
 #
 # Executes commands at login pre-zshrc.
 #
@@ -69,5 +67,3 @@ fi
 # if [[ -e "$HOME/.zshrc" ]]; then
 # 	source $HOME/.zshrc
 # fi
-
-echo "End of zprofile"

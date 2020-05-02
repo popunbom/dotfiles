@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh -x
 
-echo "Load zshenv"
-
 #
 # Defines environment variables.
 #
@@ -15,5 +13,3 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
 	echo ">> Load zprofile"
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
-
-echo "End of zshenv"

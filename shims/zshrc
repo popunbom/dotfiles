@@ -94,6 +94,8 @@ if [[ $(uname) == "Darwin"]]; then
 			COMP_FILE_DST="${ZSH_COMP_DIR}/_${COMP_FILE_PREFIX}"
 			if [[ -e ${COMP_FILE_SRC} && ! -e ${COMP_FILE_DST} ]]; then
 				ln -s ${COMP_FILE_SRC} ${COMP_FILE_DST}
+			fi
+		done
 	fi
 fi
 
