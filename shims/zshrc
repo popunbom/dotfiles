@@ -3,7 +3,9 @@
 echo "Load zshrc"
 
 #######################  zplug ###############################
+echo ">> start: source ${HOME}/.zplug/init.zsh"
 source "${HOME}/.zplug/init.zsh"
+echo ">>   end: source ${HOME}/.zplug/init.zsh"
 
 zplug "sorin-ionescu/prezto"
 
