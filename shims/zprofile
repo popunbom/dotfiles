@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+echo "Load zprofile"
+
 #
 # Executes commands at login pre-zshrc.
 #
