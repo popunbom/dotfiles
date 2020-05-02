@@ -28,3 +28,5 @@ echo "Load zlogin"
   fi
 
 } >&2
+
+echo "End of zlogin"

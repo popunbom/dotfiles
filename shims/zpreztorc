@@ -268,3 +268,4 @@ zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
 
+echo "End of zpreztorc"
