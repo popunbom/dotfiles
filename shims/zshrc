@@ -79,6 +79,20 @@ alias gs='/usr/local/bin/gs'
 if [[ ! -e "${HOME}/.zsh/completion" ]]; then
 	mkdir -p "${HOME}/.zsh/completion"
 fi
+if [[ $(uname) == "Darwin"]]; then
+	DOCKER_APP_DIR="/Applications/Docker.app"
+
+	if [[ -e ${DOCKER_APP_DIR} ]]; then
+		COMP_DIR="${DOCKER_APP_DIR}/Contents/Resources/etc"
+		COMP_FILES=("docker", "docker-compose", "docker-machine")
+
+		for COMP_FILE in COMP_FILES; do
+			if [[ -e "${COMP_DIR}/${COMP_FILE}.zsh-completion" &&
+						-e "${HOME}/.zsh/completion/"
+			]]; then
+				ln -s ""
+	fi
+fi
 if [[ -e "/Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion" && ! -e "${HOME}/.zsh/completion/docker" ]]; then
 	ln -s "/Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion" "${HOME}/.zsh/completion/docker"
 fi
