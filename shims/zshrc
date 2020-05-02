@@ -79,6 +79,8 @@ alias gs='/usr/local/bin/gs'
 if [[ ! -e "${HOME}/.zsh/completion" ]]; then
 	mkdir -p "${HOME}/.zsh/completion"
 fi
+
+# Docker: zsh-completion
 if [[ $(uname) == "Darwin"]]; then
 	DOCKER_APP_DIR="/Applications/Docker.app"
 	ZSH_COMP_DIR="${HOME}/.zsh/completion"
@@ -90,19 +92,9 @@ if [[ $(uname) == "Darwin"]]; then
 		for COMP_FILE_PREFIX in COMP_FILE_PREFIXES; do
 			COMP_FILE_SRC="${DOCKER_COMP_DIR}/${COMP_FILE_PREFIX}.zsh-completion"
 			COMP_FILE_DST="${ZSH_COMP_DIR}/_${COMP_FILE_PREFIX}"
-			if [[ -e ${COMP_FILE_SRC} && ! -e ${COMP_FILE_DST}
-			]]; then
-				ln -s ""
+			if [[ -e ${COMP_FILE_SRC} && ! -e ${COMP_FILE_DST} ]]; then
+				ln -s ${COMP_FILE_SRC} ${COMP_FILE_DST}
 	fi
-fi
-if [[ -e "/Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion" && ! -e "${HOME}/.zsh/completion/docker" ]]; then
-	ln -s "/Applications/Docker.app/Contents/Resources/etc/docker.zsh-completion" "${HOME}/.zsh/completion/docker"
-fi
-if [[ -e "/Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion" && ! -e "${HOME}/.zsh/completion/docker-compose" ]]; then
-	ln -s "/Applications/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion" "${HOME}/.zsh/completion/docker-compose"
-fi
-if [[ -e "/Applications/Docker.app/Contents/Resources/etc/docker-machine.zsh-completion" && ! -e "${HOME}/.zsh/completion/docker-machine" ]]; then
-	ln -s "/Applications/Docker.app/Contents/Resources/etc/docker-machine.zsh-completion" "${HOME}/.zsh/completion/docker-machine"
 fi
 
 
