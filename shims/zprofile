@@ -70,3 +70,4 @@ if [[ -e "$HOME/.zshrc" ]]; then
 	source $HOME/.zshrc
 fi
 
+echo "End of zprofile"

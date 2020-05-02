@@ -361,4 +361,4 @@ function mov2gif {
 	fi
 }
 
-
+echo "End of bashrc"
