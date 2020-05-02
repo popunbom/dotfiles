@@ -81,7 +81,7 @@ if [[ ! -e "${HOME}/.zsh/completion" ]]; then
 fi
 
 # Docker: zsh-completion
-if [[ $(uname) == "Darwin"]]; then
+if [[ $(uname) == "Darwin" ]]; then
 	DOCKER_APP_DIR="/Applications/Docker.app"
 	ZSH_COMP_DIR="${HOME}/.zsh/completion"
 
