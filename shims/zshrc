@@ -16,6 +16,11 @@ zplug "Tarrasch/zsh-autoenv"
 zplug load 
 # zplug load --verbose
 
+# Prezto のテーマ 'paradox' 使用時に上に1行
+# 空白が発生するのを防ぐため、PROMPT 環境変数
+# を上書きする
+PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
+
 
 ####################### prezto ###############################
 #
@@ -145,10 +150,5 @@ echo ">>   end: source ~/.zplug/repos/b4b4r07/enhancd/init.sh"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 echo "End of zshrc"
-
-# Prezto のテーマ 'paradox' 使用時に上に1行
-# 空白が発生するのを防ぐため、PROMPT 環境変数
-# を上書きする
-PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
 
 
