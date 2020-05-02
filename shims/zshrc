@@ -66,7 +66,9 @@ bindkey -M viins '^U' kill-whole-line
 
 
 # Import from .bashrc
+echo ">> start: source ${HOME}/.bashrc"
 source ${HOME}/.bashrc
+echo ">>   end: source ${HOME}/.bashrc"
 
 
 # ALIAS: Ghostscript
@@ -132,9 +134,13 @@ zle -N ls-fzf-open
 bindkey -M viins '^f' ls-fzf-open
 
 
+echo ">> start: source ~/.zplug/repos/b4b4r07/enhancd/init.sh"
 source ~/.zplug/repos/b4b4r07/enhancd/init.sh
+echo ">>   end: source ~/.zplug/repos/b4b4r07/enhancd/init.sh"
 
+echo ">> start: source ${HOME}/.iterm2_shell_integration.zsh"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+echo ">>   end: source ${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
