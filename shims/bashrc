@@ -52,6 +52,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # User's /bin Path (recursively)
 export PATH="$PATH:$(find $HOME/.bin -type d | tr $'\n' ':' | rev | cut -c 2- | rev)"
 
+# ghidra
+export PATH="$PATH:$HOME/.ghidra/*"
+
 
 
 ##### ENV SETTINGS #####
