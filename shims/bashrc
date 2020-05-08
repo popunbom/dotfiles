@@ -136,9 +136,6 @@ alias gitconfig="vim ~/.gitconfig"
 # ALIAS: .dotfiles Git Repository
 alias dotfiles="cd ${HOME}/.dotfiles"
 
-# ALIAS: PATH
-alias PATH="echo $PATH | tr ':' '\n'"
-
 # ALIAS: pkill
 alias pkill="pkill -9"
 
@@ -149,6 +146,11 @@ alias jqfzf="jq -C | fzf --ansi"
 if type "pygmentize" > /dev/null 2>&1; then
 	alias pygmentize='pygmentize -O style=monokai'
 fi
+
+# ALIAS: PATH
+function PATH () {
+	echo $PATH | tr ':' '\n'
+}
 
 # ALIAS: man -> .pdf -> open Skim.App
 # REF: https://sourceforge.net/p/skim-app/wiki/Tips_and_Tricks/
