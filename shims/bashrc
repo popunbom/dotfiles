@@ -66,13 +66,17 @@ if [[ $(uname) == "Darwin" ]]; then
 	export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 fi
 
-# ENV: Google Drive
+# Google Drive
 export GOOGLE_DRIVE_ROOT="${HOME}/Google Drive"
 
-# ENV: GUI Editor
+# GUI Editor
 export GUI_EDITOR="code"
 
+# ghq
+export GHQ_ROOT="${HOME}/.ghq"
 
+
+############ ALIASES ##############
 # ALIAS: pip
 
 # ALIAS: ls
