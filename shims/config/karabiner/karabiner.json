@@ -280,7 +280,7 @@
                         "product_id": 337,
                         "vendor_id": 2131
                     },
-                    "ignore": false,
+                    "ignore": true,
                     "manipulate_caps_lock_led": false,
                     "simple_modifications": []
                 }
