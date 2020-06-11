@@ -372,3 +372,18 @@ function mov2gif {
 		echo "Error! -- 'ffmpeg' not found"
 	fi
 }
+
+function enableAutoCommit {
+	(
+		set -x; 
+		launchctl load ~/Library/LaunchAgents/com.popunbom.dotfiles.git-autocommit.plist; 
+		launchctl list | grep "autocommit"
+	)
+}
+function disableAutoCommit {
+	(
+		set -x; 
+		launchctl unload ~/Library/LaunchAgents/com.popunbom.dotfiles.git-autocommit.plist;
+		launchctl list | grep "autocommit"
+	)
+}
