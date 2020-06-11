@@ -52874,7 +52874,6 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-<<<<<<< HEAD
 		<key>0x2b-0x120000</key>
 		<dict>
 			<key>Action</key>
@@ -52904,8 +52903,6 @@ Make Text Bigger</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
-=======
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 		<key>0x66-0x140000</key>
 		<dict>
 			<key>Action</key>
@@ -53089,7 +53086,6 @@ Make Text Bigger</string>
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-<<<<<<< HEAD
 	<string>0 129 224 280 0 0 1920 1057 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>846 1278 445 456 0 1080 1440 788 </string>
@@ -53105,13 +53101,6 @@ Make Text Bigger</string>
 	<string>1 536 1182 501 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>148 150 1335 748 0 0 1920 1057 </string>
-=======
-	<string>0 135 224 275 0 0 1280 777 </string>
-	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>240 259 799 448 0 0 1280 777 </string>
-	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 52 1280 725 0 0 1280 777 </string>
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>NeverWarnAboutShortLivedSessions_92556768-680E-496B-9EC1-6AD172A30892</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_92556768-680E-496B-9EC1-6AD172A30892_selection</key>
@@ -55041,21 +55030,7 @@ Make Text Bigger</string>
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-<<<<<<< HEAD
-		<string>3.3.6</string>
-		<string>3.3.8</string>
-		<string>3.3.11</string>
-		<string>3.3.1</string>
-		<string>3.3.3</string>
-		<string>3.3.5</string>
-		<string>3.3.7</string>
 		<string>3.3.9</string>
-		<string>3.2.9</string>
-		<string>3.3.0</string>
-		<string>3.3.4</string>
-=======
-		<string>3.3.9</string>
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -55067,24 +55042,14 @@ Make Text Bigger</string>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-<<<<<<< HEAD
 		<string>{{0, 1080}, {1920, 1080}}</string>
 		<key>topLeft</key>
 		<string>{9, 2132}</string>
-=======
-		<string>{{0, 0}, {1280, 800}}</string>
-		<key>topLeft</key>
-		<string>{271, 729}</string>
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>68833428-B19F-4A49-9872-F69B61E81049</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-<<<<<<< HEAD
 	<integer>154</integer>
-=======
-	<integer>3</integer>
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -55807,17 +55772,14 @@ Make Text Bigger</string>
 			</dict>
 		</array>
 	</dict>
-<<<<<<< HEAD
 	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>572505439.90743899</real>
-=======
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>607605197.75163996</real>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>OpenBookmark</key>
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
@@ -55878,7 +55840,6 @@ Make Text Bigger</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-<<<<<<< HEAD
 	<date>2020-06-09T14:50:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
@@ -55886,11 +55847,6 @@ Make Text Bigger</string>
 	<integer>2164353065</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
-=======
-	<date>2020-04-03T11:37:49Z</date>
-	<key>SUSendProfileInfo</key>
-	<false/>
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>SeparateStatusBarsPerPane</key>
 	<true/>
 	<key>ShowBookmarkName</key>
@@ -55936,11 +55892,7 @@ Make Text Bigger</string>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-<<<<<<< HEAD
 	<string>3.3.11</string>
-=======
-	<string>3.3.9</string>
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

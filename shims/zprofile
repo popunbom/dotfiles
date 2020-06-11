@@ -67,7 +67,3 @@ fi
 # if [[ -e "$HOME/.zshrc" ]]; then
 # 	source $HOME/.zshrc
 # fi
-<<<<<<< HEAD
-=======
-
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202

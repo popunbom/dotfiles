@@ -14,13 +14,6 @@ zplug load
 ####################### zplug ###############################
 
 
-<<<<<<< HEAD
-# Prezto のテーマ 'paradox' 使用時に上に1行
-# 空白が発生するのを防ぐため、PROMPT 環境変数
-# を上書きする
-PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
-
-=======
 ####################### prezto ###############################
 # Override Prompt
 function prompt_paradox_start_segment {
@@ -54,7 +47,6 @@ function paradox_customize {
   prompt_paradox_end_segment
 }
 PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
->>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 
 ####################### prezto ###############################
 
