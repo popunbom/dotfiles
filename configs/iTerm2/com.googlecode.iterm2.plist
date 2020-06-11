@@ -52854,7 +52854,7 @@
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
-	<true/>
+	<false/>
 	<key>DimOnlyText</key>
 	<true/>
 	<key>DisableFullscreenTransparency</key>
@@ -52874,6 +52874,7 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+<<<<<<< HEAD
 		<key>0x2b-0x120000</key>
 		<dict>
 			<key>Action</key>
@@ -52903,6 +52904,8 @@ Make Text Bigger</string>
 			<key>Text</key>
 			<string></string>
 		</dict>
+=======
+>>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 		<key>0x66-0x140000</key>
 		<dict>
 			<key>Action</key>
@@ -53038,16 +53041,12 @@ Make Text Bigger</string>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 1</string>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/.ghq/github.com/mbadolato/iTerm2-Color-Schemes/schemes</string>
-	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<key>MaxVertically</key>
 	<false/>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/.dotfiles/configs/iTerm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 448}</string>
+	<string>{799, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -53058,29 +53057,29 @@ Make Text Bigger</string>
 	<false/>
 	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
 	<array>
-		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
-		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 224.000000, 258.000000, NO, NO</string>
+		<string>0.000000, 259.000000, 224.000000, 48.000000, NO, NO</string>
 	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
-	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
-	AAGGoK4HCA8aGxwdHh8gJjAxMlUkbnVsbNIJCgsOWk5TLm9iamVjdHNWJGNsYXNzogwN
-	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
-	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
-	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
-	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
-	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
-	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVVBcnJheYABrgsMEx4fICEiIyQqNDU2VSRu
+	dWxs0g0ODxJaTlMub2JqZWN0c1YkY2xhc3OiEBGAAoAKgA3TFA0OFRkdV05TLmtleXOj
+	FhcYgAOABIAFoxobHIAGgAeACIAJWklkZW50aWZpZXJVV2lkdGhWSGlkZGVuUTAjQGjA
+	AAAAAAAI0iUmJyhaJGNsYXNzbmFtZVgkY2xhc3Nlc1xOU0RpY3Rpb25hcnmiJylYTlNP
+	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0B0oZ2yLQ5W0iUmNzhe
+	TlNNdXRhYmxlQXJyYXmjNzkpV05TQXJyYXkACAARABoAJAApADIANwBJAEwAUgBUAGMA
+	aQBuAHkAgACDAIUAhwCJAJAAmACcAJ4AoACiAKYAqACqAKwArgC5AL8AxgDIANEA0gDX
+	AOIA6wD4APsBBAELAQ8BEQETARUBGQEbAR0BHwEhASMBLAExAUABRAAAAAAAAAIBAAAA
 	AAAAADoAAAAAAAAAAAAAAAAAAAFM
 	</data>
 	<key>NSTableView Sort Ordering v2 KeyBingingTable</key>
 	<data>
-	YnBsaXN0MDDUAQIDBAUGFBVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
-	AAGGoKMHCA1VJG51bGzSCQoLDFpOUy5vYmplY3RzViRjbGFzc6CAAtIODxARWiRjbGFz
-	c25hbWVYJGNsYXNzZXNeTlNNdXRhYmxlQXJyYXmjEBITV05TQXJyYXlYTlNPYmplY3Rf
-	EA9OU0tleWVkQXJjaGl2ZXLRFhdVQXJyYXmAAQgRGiMtMjc7QUZRWFlbYGt0g4ePmKqt
-	swAAAAAAAAEBAAAAAAAAABgAAAAAAAAAAAAAAAAAAAC1
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVVBcnJheYABowsMEVUkbnVsbNINDg8QWk5T
+	Lm9iamVjdHNWJGNsYXNzoIAC0hITFBVaJGNsYXNzbmFtZVgkY2xhc3Nlc15OU011dGFi
+	bGVBcnJheaMUFhdXTlNBcnJheVhOU09iamVjdAgRGiQpMjdJTFJUWF5jbnV2eH2IkaCk
+	rAAAAAAAAAEBAAAAAAAAABgAAAAAAAAAAAAAAAAAAAC1
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
@@ -53090,6 +53089,7 @@ Make Text Bigger</string>
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
+<<<<<<< HEAD
 	<string>0 129 224 280 0 0 1920 1057 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>846 1278 445 456 0 1080 1440 788 </string>
@@ -53105,6 +53105,13 @@ Make Text Bigger</string>
 	<string>1 536 1182 501 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>148 150 1335 748 0 0 1920 1057 </string>
+=======
+	<string>0 135 224 275 0 0 1280 777 </string>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>240 259 799 448 0 0 1280 777 </string>
+	<key>NSWindow Frame iTerm Window 0</key>
+	<string>0 52 1280 725 0 0 1280 777 </string>
+>>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>NeverWarnAboutShortLivedSessions_92556768-680E-496B-9EC1-6AD172A30892</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_92556768-680E-496B-9EC1-6AD172A30892_selection</key>
@@ -53115,7 +53122,7 @@ Make Text Bigger</string>
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<true/>
+			<false/>
 			<key>Allow Title Reporting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
@@ -53691,13 +53698,13 @@ Make Text Bigger</string>
 			<key>Mouse Reporting allow mouse wheel</key>
 			<true/>
 			<key>Name</key>
-			<string>Popunbom's Default</string>
+			<string>Default</string>
 			<key>Non Ascii Font</key>
 			<string>HiraKakuStdN-W8 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Cica-Regular 18</string>
+			<string>RictyDiminishedDiscordN-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -53731,6 +53738,8 @@ Make Text Bigger</string>
 				<real>0.33870631456375122</real>
 			</dict>
 			<key>Send Code When Idle</key>
+			<false/>
+			<key>Send Idle Alert</key>
 			<false/>
 			<key>Shortcut</key>
 			<string></string>
@@ -54023,145 +54032,209 @@ Make Text Bigger</string>
 			<true/>
 			<key>Ansi 0 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.13574661314487457</real>
+				<real>0.144805908203125</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.13574661314487457</real>
+				<real>0.12132386118173599</real>
 				<key>Red Component</key>
-				<real>0.13574661314487457</real>
+				<real>0.10958284884691238</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
-				<key>Blue Component</key>
-				<real>0.058871746063232422</real>
-				<key>Green Component</key>
-				<real>0.0</real>
-				<key>Red Component</key>
+				<key>Alpha Component</key>
 				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.32156860828399658</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.18431362509727478</real>
+				<key>Red Component</key>
+				<real>0.98823529481887817</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.35646489262580872</real>
+				<real>0.41960778832435608</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.88189995288848877</real>
+				<real>0.77254903316497803</real>
 				<key>Red Component</key>
-				<real>0.67126059532165527</real>
+				<real>0.24705886840820312</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
-				<key>Blue Component</key>
-				<real>0.25792300701141357</real>
-				<key>Green Component</key>
-				<real>0.82281720638275146</real>
-				<key>Red Component</key>
+				<key>Alpha Component</key>
 				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.34901958703994751</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.78431379795074463</real>
+				<key>Red Component</key>
+				<real>0.97647064924240112</real>
 			</dict>
 			<key>Ansi 12 Color</key>
 			<dict>
-				<key>Blue Component</key>
+				<key>Alpha Component</key>
 				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.99607843160629272</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.57330304384231567</real>
+				<real>0.69411760568618774</real>
 				<key>Red Component</key>
-				<real>0.00053359760204330087</real>
+				<real>0.062745340168476105</real>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.92307692766189575</real>
+				<real>0.97254902124404907</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.37417232990264893</real>
+				<real>0.47058820724487305</real>
 				<key>Red Component</key>
-				<real>0.6050449013710022</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 14 Color</key>
 			<dict>
-				<key>Blue Component</key>
-				<real>0.9409477710723877</real>
-				<key>Green Component</key>
+				<key>Alpha Component</key>
 				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.73725491762161255</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.7254902720451355</real>
 				<key>Red Component</key>
-				<real>0.40420106053352356</real>
+				<real>0.37254902720451355</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.9998813271522522</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.9998813271522522</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.99988144636154175</real>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.04123397171497345</real>
+				<real>0.36170727014541626</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.88189995288848877</real>
+				<real>0.64468729496002197</real>
 				<key>Red Component</key>
-				<real>0.54928803443908691</real>
+				<real>0.14523378014564514</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.4156862199306488</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.72656995058059692</real>
+				<real>0.57647067308425903</real>
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.97294086217880249</real>
+				<real>0.99999994039535522</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.55481654405593872</real>
+				<real>0.4627450704574585</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.2039216160774231</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.65052211284637451</real>
+				<real>0.99607843160629272</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.26314744353294373</real>
+				<real>0.4941176176071167</real>
 				<key>Red Component</key>
-				<real>0.42564234137535095</real>
+				<real>0.62352949380874634</real>
 			</dict>
 			<key>Ansi 6 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.92260181903839111</real>
+				<real>0.66666668653488159</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.84575581550598145</real>
+				<real>0.51372551918029785</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.26666668057441711</real>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.91828912496566772</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.8685295581817627</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.83686453104019165</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.26696833968162537</real>
+				<real>0.5365447998046875</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.26696833968162537</real>
+				<real>0.44953754544258118</real>
 				<key>Red Component</key>
-				<real>0.26696833968162537</real>
+				<real>0.40603390336036682</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.24923402070999146</real>
+				<real>0.50196075439453125</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.15470406413078308</real>
+				<real>0.39215683937072754</real>
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
@@ -54172,13 +54245,13 @@ Make Text Bigger</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.18230989575386047</real>
+				<real>0.14544677734375</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.18230989575386047</real>
+				<real>0.12307035177946091</real>
 				<key>Red Component</key>
-				<real>0.18230989575386047</real>
+				<real>0.11188211292028427</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -54205,12 +54278,16 @@ Make Text Bigger</string>
 			<real>2</real>
 			<key>Bold Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.60246169567108154</real>
+				<real>1</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.6100342869758606</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.61956524848937988</real>
+				<real>1</real>
 			</dict>
 			<key>Character Encoding</key>
 			<integer>4</integer>
@@ -54224,12 +54301,16 @@ Make Text Bigger</string>
 			<real>0.0</real>
 			<key>Cursor Color</key>
 			<dict>
-				<key>Blue Component</key>
-				<real>0.0940093994140625</real>
-				<key>Green Component</key>
-				<real>0.0</real>
-				<key>Red Component</key>
+				<key>Alpha Component</key>
 				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.0</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.80000001192092896</real>
+				<key>Red Component</key>
+				<real>0.99999994039535522</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -54246,12 +54327,16 @@ Make Text Bigger</string>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
-				<key>Blue Component</key>
-				<real>0.0940093994140625</real>
-				<key>Green Component</key>
-				<real>0.0</real>
-				<key>Red Component</key>
+				<key>Alpha Component</key>
 				<real>1</real>
+				<key>Blue Component</key>
+				<real>1</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>1</real>
+				<key>Red Component</key>
+				<real>0.99999600648880005</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -54271,12 +54356,16 @@ Make Text Bigger</string>
 			<true/>
 			<key>Foreground Color</key>
 			<dict>
-				<key>Blue Component</key>
-				<real>0.95548701286315918</real>
-				<key>Green Component</key>
-				<real>0.98048108816146851</real>
-				<key>Red Component</key>
+				<key>Alpha Component</key>
 				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.84942626953125</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.8035888671875</real>
+				<key>Red Component</key>
+				<real>0.77635097503662109</real>
 			</dict>
 			<key>Guid</key>
 			<string>03031153-4DAC-4F88-957E-9B15E0F23532</string>
@@ -54301,7 +54390,7 @@ Make Text Bigger</string>
 			<key>HotKey Window Animates</key>
 			<false/>
 			<key>HotKey Window AutoHides</key>
-			<false/>
+			<true/>
 			<key>HotKey Window Dock Click Action</key>
 			<integer>0</integer>
 			<key>HotKey Window Floats</key>
@@ -54605,13 +54694,13 @@ Make Text Bigger</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.73423302173614502</real>
+				<real>0.99999994039535522</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.35916060209274292</real>
+				<real>0.4627450704574585</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.2039216160774231</real>
 			</dict>
 			<key>Minimum Contrast</key>
 			<real>0.0</real>
@@ -54641,8 +54730,12 @@ Make Text Bigger</string>
 			<integer>1000</integer>
 			<key>Selected Text Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
 				<real>1</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
 				<real>1</real>
 				<key>Red Component</key>
@@ -54650,12 +54743,16 @@ Make Text Bigger</string>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.23076923191547394</real>
+				<real>0.32156860828399658</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.16498950123786926</real>
+				<real>0.26666668057441711</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.24313730001449585</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -54944,6 +55041,7 @@ Make Text Bigger</string>
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+<<<<<<< HEAD
 		<string>3.3.6</string>
 		<string>3.3.8</string>
 		<string>3.3.11</string>
@@ -54955,49 +55053,46 @@ Make Text Bigger</string>
 		<string>3.2.9</string>
 		<string>3.3.0</string>
 		<string>3.3.4</string>
+=======
+		<string>3.3.9</string>
+>>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
-		<string>Cica</string>
+		<string>RictyDiminishedDiscord NF</string>
+		<string>Menlo</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
-	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt</key>
-	<true/>
-	<key>NoSyncDoNotWarnBeforePastingOneLineEndingInNewlineAtShellPrompt_selection</key>
-	<integer>1</integer>
-	<key>NoSyncFrame_SessionsPreferences</key>
-	<dict>
-		<key>screenFrame</key>
-		<string>{{0, 0}, {1920, 1080}}</string>
-		<key>topLeft</key>
-		<string>{657, 934}</string>
-	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
+<<<<<<< HEAD
 		<string>{{0, 1080}, {1920, 1080}}</string>
 		<key>topLeft</key>
 		<string>{9, 2132}</string>
+=======
+		<string>{{0, 0}, {1280, 800}}</string>
+		<key>topLeft</key>
+		<string>{271, 729}</string>
+>>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	</dict>
-	<key>NoSyncHaveUsedCopyMode</key>
-	<true/>
-	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
-	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>985E9623-D97C-4565-AC6F-9A1D661A3DCC</string>
+	<string>68833428-B19F-4A49-9872-F69B61E81049</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
+<<<<<<< HEAD
 	<integer>154</integer>
+=======
+	<integer>3</integer>
+>>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>586506146.93526697</real>
+	<real>607777997.75183702</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -55356,39 +55451,7 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.tmuxClientName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.tmuxRole</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.tmuxWindowName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
 				<string>currentTab.currentSession.terminalIconName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.terminalWindowName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55407,14 +55470,6 @@ Make Text Bigger</string>
 				<string>currentTab</string>
 				<key>nonterminalContext</key>
 				<integer>2</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.tmuxPaneTitle</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
 			</dict>
 			<dict>
 				<key>isTerminal</key>
@@ -55444,6 +55499,14 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.currentSession.name</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>titleOverride</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -55452,7 +55515,7 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.name</string>
+				<string>number</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55476,14 +55539,6 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>number</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
 				<string>currentTab.currentSession.hostname</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -55493,6 +55548,14 @@ Make Text Bigger</string>
 				<true/>
 				<key>name</key>
 				<string>currentTab.currentSession.tty</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.username</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55508,23 +55571,7 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentTab.currentSession.username</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
 				<string>titleOverrideFormat</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.tmuxStatusLeft</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55536,14 +55583,6 @@ Make Text Bigger</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentTab.currentSession.tmuxStatusRight</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
 		</array>
 		<key>2</key>
 		<array>
@@ -55551,71 +55590,7 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>tmuxWindowTitle</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>id</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>titleOverrideFormat</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<false/>
-				<key>name</key>
-				<string>currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>titleOverride</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.jobName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>tmuxWindowName</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.presentationName</string>
+				<string>currentSession.commandLine</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55631,6 +55606,30 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxWindowTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.presentationName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>iterm2.localhostName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -55639,7 +55638,7 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.commandLine</string>
+				<string>tmuxWindowName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55655,7 +55654,63 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentSession.tty</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.jobName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.name</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>window</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>id</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>titleOverride</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.username</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.termid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55671,7 +55726,7 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>tmuxWindow</string>
+				<string>titleOverrideFormat</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55679,7 +55734,7 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession.jobPid</string>
+				<string>currentSession.hostname</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55687,7 +55742,7 @@ Make Text Bigger</string>
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>title</string>
+				<string>currentSession.path</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55696,6 +55751,30 @@ Make Text Bigger</string>
 				<true/>
 				<key>name</key>
 				<string>currentSession.pid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxWindow</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -55728,11 +55807,20 @@ Make Text Bigger</string>
 			</dict>
 		</array>
 	</dict>
+<<<<<<< HEAD
 	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>572505439.90743899</real>
+=======
+	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
+	<real>607605197.75163996</real>
+	<key>OpenArrangementAtStartup</key>
+	<false/>
+>>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>OpenBookmark</key>
+	<false/>
+	<key>OpenNoWindowsAtStartup</key>
 	<false/>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
@@ -55774,7 +55862,7 @@ Make Text Bigger</string>
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/popunbom/.dotfiles/configs/iTerm2</string>
+	<string>/Users/fumiendo/.dotfiles/configs/iTerm2</string>
 	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
 	<false/>
 	<key>Print In Black And White</key>
@@ -55786,10 +55874,11 @@ Make Text Bigger</string>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final_new.xml?shard=77</string>
+	<string>https://iterm2.com/appcasts/final_new.xml?shard=52</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
+<<<<<<< HEAD
 	<date>2020-06-09T14:50:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
@@ -55797,6 +55886,11 @@ Make Text Bigger</string>
 	<integer>2164353065</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
+=======
+	<date>2020-04-03T11:37:49Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
+>>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>SeparateStatusBarsPerPane</key>
 	<true/>
 	<key>ShowBookmarkName</key>
@@ -55842,7 +55936,11 @@ Make Text Bigger</string>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
+<<<<<<< HEAD
 	<string>3.3.11</string>
+=======
+	<string>3.3.9</string>
+>>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

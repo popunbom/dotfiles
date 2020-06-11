@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-#######################  zplug ###############################
+####################### zplug ###############################
 source "${HOME}/.zplug/init.zsh"
 
 zplug "sorin-ionescu/prezto"
@@ -11,20 +11,52 @@ zplug "Tarrasch/zsh-autoenv"
 
 zplug load 
 # zplug load --verbose
+####################### zplug ###############################
 
+
+<<<<<<< HEAD
 # Prezto のテーマ 'paradox' 使用時に上に1行
 # 空白が発生するのを防ぐため、PROMPT 環境変数
 # を上書きする
 PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
 
+=======
+####################### prezto ###############################
+# Override Prompt
+function prompt_paradox_start_segment {
+  local bg fg
+  [[ -n "$1" ]] && bg="%K{$1}" || bg="%k"
+  [[ -n "$2" ]] && fg="%F{$2}" || fg="%f"
+
+  if [[ "$_prompt_paradox_current_bg" != 'NONE' && "$1" != "$_prompt_paradox_current_bg" ]]; then
+    print -n " $bg%F{$_prompt_paradox_current_bg}$_prompt_paradox_segment_separator$fg "
+  else
+    print -n "$bg$fg "
+  fi
+  _prompt_paradox_current_bg="$1"
+  [[ -n "$3" ]] && print -n "$3"
+}
+function paradox_customize {
+  STATUS='%(?::%F{red}✘ )%(!:%F{yellow}⚡ :)%(1j:%F{cyan}⚙ :)'
+  USER_NAME='%F{222}%B%n%b%F{202}@%F{114}%m%f'
+  # prompt_paradox_start_segment [bg-color] [fg-color]
+  prompt_paradox_start_segment 240 255 "${STATUS}${USER_NAME}"
+  prompt_paradox_start_segment 069 255 '$_prompt_paradox_pwd'
+
+  if [[ -n "$git_info" ]]; then
+    prompt_paradox_start_segment green black '${(e)git_info[ref]}${(e)git_info[status]}'
+  fi
+
+  if [[ -n "$python_info" ]]; then
+    prompt_paradox_start_segment white black '${(e)python_info[virtualenv]}'
+  fi
+
+  prompt_paradox_end_segment
+}
+PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
+>>>>>>> 76a64c4e9531b5cfc3c77086d42c781af501f202
 
 ####################### prezto ###############################
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
 # Enable: zsh-completions
 if [ -e "/usr/local/share/zsh-completions" ]; then
