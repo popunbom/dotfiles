@@ -16,36 +16,11 @@ zplug load
 
 ####################### prezto ###############################
 # Override Prompt
-function prompt_paradox_start_segment {
-  local bg fg
-  [[ -n "$1" ]] && bg="%K{$1}" || bg="%k"
-  [[ -n "$2" ]] && fg="%F{$2}" || fg="%f"
-
-  if [[ "$_prompt_paradox_current_bg" != 'NONE' && "$1" != "$_prompt_paradox_current_bg" ]]; then
-    print -n " $bg%F{$_prompt_paradox_current_bg}$_prompt_paradox_segment_separator$fg "
-  else
-    print -n "$bg$fg "
-  fi
-  _prompt_paradox_current_bg="$1"
-  [[ -n "$3" ]] && print -n "$3"
-}
-function paradox_customize {
-	# PROMPT=$'%K{default} %F{255}%F{196}✘ %F{220}⚡%F{87}⚙  %F{222}%n%F{202}%B@%b%F{114}%m%b%f %F{blue}%{\e[7m%}\ue0c4%{\e[0m%}%K{blue}%F{255} %B$_prompt_paradox_pwd%b %k%F{blue}\ue0c4%f '
-  STATUS='%(?::%F{red}✘ )%(!:%F{yellow}⚡ :)%(1j:%F{cyan}⚙ :)'
-  USER_NAME='%F{222}%B%n%b%F{202}@%F{114}%m%f'
-  # prompt_paradox_start_segment [bg-color] [fg-color]
-  prompt_paradox_start_segment 240 255 "${STATUS}${USER_NAME}"
-  prompt_paradox_start_segment 069 255 '$_prompt_paradox_pwd'
-
-  if [[ -n "$git_info" ]]; then
-    prompt_paradox_start_segment green black '${(e)git_info[ref]}${(e)git_info[status]}'
-  fi
-
-  if [[ -n "$python_info" ]]; then
-    prompt_paradox_start_segment white black '${(e)python_info[virtualenv]}'
-  fi
-
-  prompt_paradox_end_segment
+function paradox_customize() {
+	echo -ne $'%K{default} %F{255}%F{196}✘ %F{220}⚡%F{87}⚙  \
+%F{yellow}%n%F{red}%B@%b%F{green}%m%b%f \
+%F{blue}%{\e[7m%}\ue0b0%{\e[0m%}%K{blue}%F{255} \
+%B$_prompt_paradox_pwd%b %k%F{blue}\ue0b0%f'
 }
 PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
 
