@@ -16,10 +16,18 @@ zplug load
 
 ####################### prezto ###############################
 # Override Prompt
-# function paradox_customize() {
-# 	echo -ne $'%K{default} %(?::%F{196}✘ )%(!:%F{220}⚡ :)%(1j:%F{87}⚙ :)%F{yellow}%n%F{red}%B@%b%F{green}%m%b%f %F{blue}%{\e[7m%}\ue0b0%{\e[0m%}%K{blue}%F{255} %B$_prompt_paradox_pwd%b %K{green}%F{blue}%F{black} ${(e)git_info[ref]}${(e)git_info[status]} %k%F{green}%f'
-# }
-# PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
+function paradox_customize() {
+	local PROMPT_GIT_INFO=""
+	local PROMPT_PYTHON_INFO=""
+	if [[ -n "$git_info" ]]; then
+    PROMPT_GIT_INFO=$'%K{green}%F{blue}%F{black} ${(e)git_info[ref]}${(e)git_info[status]} %k%F{green}%f%k'
+  fi
+
+  # if [[ -n "$python_info" ]]; then
+  # fi
+	echo -ne $'%K{default} %(?::%F{196}✘ )%(!:%F{220}⚡ :)%(1j:%F{87}⚙ :)%F{yellow}%n%F{red}%B@%b%F{green}%m%b%f %F{blue}%{\e[7m%}\ue0b0%{\e[0m%}%K{blue}%F{255} %B$_prompt_paradox_pwd%b '"${PROMPT_GIT_INFO}""${PROMPT_PYTHON_INFO}"$'%k%f'
+}
+PROMPT='${(e)$(paradox_customize)}'$'\n'' ${editor_info[keymap]} '
 
 ####################### prezto ###############################
 
