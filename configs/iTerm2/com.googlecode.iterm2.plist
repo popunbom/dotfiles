@@ -53102,7 +53102,7 @@ Make Text Bigger</string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>299 1378 928 394 0 1080 1440 788 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2037 176 1299 488 1920 0 1920 1057 </string>
+	<string>600 299 730 525 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1 536 1182 501 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -54010,6 +54010,8 @@ Make Text Bigger</string>
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Use Underline Color</key>
+			<false/>
+			<key>Use libtickit protocol</key>
 			<false/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
@@ -55078,7 +55080,7 @@ Make Text Bigger</string>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{767, 900}</string>
+		<string>{517, 852}</string>
 	</dict>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
@@ -55087,7 +55089,7 @@ Make Text Bigger</string>
 	<key>NoSyncInstallationId</key>
 	<string>985E9623-D97C-4565-AC6F-9A1D661A3DCC</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>165</integer>
+	<integer>168</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -55894,7 +55896,7 @@ Make Text Bigger</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-07-10T12:06:15Z</date>
+	<date>2020-07-16T12:07:25Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
