@@ -19,7 +19,7 @@
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Cica",
-	"font_size": 60,
+	"font_size": 56,
 	"highlight_line": true,
 	"ignored_packages":
 	[
