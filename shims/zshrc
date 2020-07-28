@@ -28,7 +28,7 @@ function prompt_paradox_start_segment {
     print -n "$bg$fg "
   fi
   _prompt_paradox_current_bg="$1"
-  [[ -n "$3" ]] && print -n "$3"
+  [[ -n "$3" ]] && print -n " $3"
 }
 function prompt_paradox_build_prompt {
   # prompt_paradox_start_segment [bg] [fg]
