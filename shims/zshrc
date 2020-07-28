@@ -21,18 +21,18 @@ function prompt_paradox_start_segment {
   [[ -n "$1" ]] && bg="%K{$1}" || bg="%k"
   [[ -n "$2" ]] && fg="%F{$2}" || fg="%f"
   if [[ "$_prompt_paradox_current_bg" == 'default' ]]; then
-    print -n "%K{$_prompt_paradox_current_bg}%F{$1}"$'%{\e[7m%}'"$_prompt_paradox_segment_separator"$'%{\e[0m%}'"$bg$fg"
+    print -n "#%K{$_prompt_paradox_current_bg}%F{$1}"$'%{\e[7m%}'"$_prompt_paradox_segment_separator"$'%{\e[0m%}'"$bg$fg"
   elif [[ "$_prompt_paradox_current_bg" != 'NONE' && "$1" != "$_prompt_paradox_current_bg" ]]; then
-    print -n "$bg%F{$_prompt_paradox_current_bg}$_prompt_paradox_segment_separator$fg"
+    print -n "=$bg%F{$_prompt_paradox_current_bg}$_prompt_paradox_segment_separator$fg"
   else
-    print -n "$bg$fg "
+    print -n "+$bg$fg "
   fi
 
   if [[ -n "$3" ]]; then
 		if [[ "$_prompt_paradox_current_bg" != 'NONE' ]]; then
 			print -n " "
 		fi
-		print -n "$3"
+		print -n "$3 "
 	fi
 
   _prompt_paradox_current_bg="$1"
