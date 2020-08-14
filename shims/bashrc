@@ -50,7 +50,9 @@ export PATH="$HOME/.golang/bin:/usr/local/opt/go/libexec/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # User's /bin Path (recursively)
-export PATH="$PATH:$(find $HOME/.bin -type d | tr $'\n' ':' | rev | cut -c 2- | rev)"
+if [[ -e "$HOME/.bin"]]; then
+	export PATH="$PATH:$(find $HOME/.bin -type d | tr $'\n' ':' | rev | cut -c 2- | rev)"
+fi
 
 # ghidra
 export PATH="$PATH:$HOME/.ghidra/*"
