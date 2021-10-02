@@ -3,7 +3,7 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = popunbom
-	email = fantom0779@gmail.com
+	email = 28749104+popunbom@users.noreply.github.com
 
 [core]
 	editor = vim -c \"set fenc=utf-8\"
