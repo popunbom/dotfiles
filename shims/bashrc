@@ -247,24 +247,19 @@ function myFileEncrypt {
 if [[ $# == 0 || $1 == '--help' || $1 == '-h' ]]; then
 	show_usage
 else
+		USE_CUSTOM_NAME=0
 	IN_FILE=$1
+		OUT_FILE=""
 	shift
 	# Parse arguments
 	for OPT in "$@"; do
-
-		if [[ -n $OUT_FILE ]]; then
-			echo "invalid arguments !"
-			show_usage
-			return -1
-		fi
-
 		case $OPT in
 			'-o' )
 				USE_CUSTOM_NAME=1
 				;;
 			* )
-				if [[ ! $USE_CUSTOM_NAME ]]; then
-					echo "invalid arguments !"
+					if [[ $USE_CUSTOM_NAME == 0 ]]; then
+						echo "invalid arguments !: set filename without '-o' option"
 					show_usage
 					return -1
 				else
@@ -275,19 +270,18 @@ else
 		shift
 	done
 
+		if [[ $USE_CUSTOM_NAME == 0 ]]; then
+			OUT_FILE="${IN_FILE}.encrypted"
+		else
 	if [[ -z $OUT_FILE ]]; then
 		echo "invalid arguments !: '-o' option requires 'out-file-name'"
+				show_usage
 		return -1
 	fi
+		fi
 
-
-	if [[ $USE_CUSTOM_NAME ]]; then
 		echo "Encrypt:  \"${IN_FILE}\"  -->  \"${OUT_FILE}\""
 		openssl aes-256-cbc -e -in "${IN_FILE}" -out "${OUT_FILE}"
-	else
-		echo "Encrypt:  \"${IN_FILE}\"  -->  \"${IN_FILE}.encrypted\""
-		openssl aes-256-cbc -e -in "${IN_FILE}" -out "${IN_FILE}.encrypted"
-	fi
 fi
 
 }
