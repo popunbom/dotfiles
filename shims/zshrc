@@ -54,7 +54,7 @@ function prompt_paradox_build_prompt {
 }
   PROMPT='
 ${(e)$(prompt_paradox_build_prompt)}
- ${editor_info[keymap]} '
+${editor_info[keymap]} '
 
 ####################### prezto ###############################
 
@@ -77,6 +77,8 @@ setopt correct
 setopt nonomatch
 # Enable: Completion dotfiles
 setopt globdots
+# 先頭に半角スペースをつけると、history に記録しないようにする
+setopt hist_ignore_space
 
 # Customize: zsh-autosuggestion
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
@@ -99,6 +101,8 @@ bindkey -M viins '^U' kill-whole-line
 # zsh の gs='git stash'と干渉するため
 alias gs='/usr/local/bin/gs'
 
+# ALIAS: which
+alias which='whence -p'
 
 # zsh-completion
 if [[ ! -e "${HOME}/.zsh/completion" ]]; then
@@ -122,6 +126,11 @@ if [[ $(uname) == "Darwin" ]]; then
 			fi
 		done
 	fi
+fi
+
+# kubectl: zsh-completion
+if type "kubectl" > /dev/null 2>&1; then
+	source <(kubectl completion zsh)
 fi
 
 
@@ -171,6 +180,4 @@ bindkey -M viins '^f' ls-fzf-open
 source ~/.zplug/repos/b4b4r07/enhancd/init.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 

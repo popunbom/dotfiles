@@ -64,7 +64,7 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-if [[ -e "$HOME/.profile" ]]; then
-	source $HOME/.profile
+# Load ~/.bash_profile
+if [[ -e "$HOME/.bash_profile" ]]; then
+	source $HOME/.bash_profile
 fi
-

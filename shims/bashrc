@@ -40,8 +40,8 @@ if [[ $(uname) == "Linux" ]]; then
 		eval $(brew shellenv)
 	fi
 fi
-#  nodebrew
-export PATH="$HOME/.nodebrew/current/bin:$PATH"
+# node
+export NODE_PATH=$(npm root -g)
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #  golang
@@ -55,6 +55,8 @@ fi
 # ghidra
 export PATH="$PATH:$HOME/.ghidra/*"
 
+# mysql-client
+export PATH="$PATH:/usr/local/opt/mysql-client/bin"
 
 
 ##### ENV SETTINGS #####
@@ -75,6 +77,9 @@ export GUI_EDITOR="code"
 # ghq
 export GHQ_ROOT="${HOME}/.ghq"
 
+# Python
+export PYTHONUNBUFFERED=1
+export PIPENV_VENV_IN_PROJECT="true"
 
 ############ ALIASES ##############
 # ALIAS: pip
@@ -112,7 +117,10 @@ alias jnb="jupyter notebook"
 
 # ALIAS: docker
 alias d='docker'
-alias dc='docker-compose'
+alias dc='docker compose'
+
+# ALIAS: kubectl
+alias kc='kubectl'
 
 # ALIAS: ls | grep
 alias lg='/bin/ls -a1 | grep'
@@ -123,7 +131,7 @@ alias fv='fzf-prev'
 
 # ALIAS: ghq
 if type "ghq" > /dev/null 2>&1; then
-	alias gg='ghq get'
+	alias gg='ghq get -p'
 	if type "fzf" > /dev/null 2>&1; then
 		alias gcd='cd $(ghq root)/$(ghq list | fzf)'
 		alias gls='ghq list | fzf'
@@ -242,45 +250,45 @@ function myFileEncrypt {
 		EOS
 	}
 
-if [[ $# == 0 || $1 == '--help' || $1 == '-h' ]]; then
-	show_usage
-else
+	if [[ $# == 0 || $1 == '--help' || $1 == '-h' ]]; then
+		show_usage
+	else
 		USE_CUSTOM_NAME=0
-	IN_FILE=$1
+		IN_FILE=$1
 		OUT_FILE=""
-	shift
-	# Parse arguments
-	for OPT in "$@"; do
-		case $OPT in
-			'-o' )
-				USE_CUSTOM_NAME=1
-				;;
-			* )
+		shift
+		# Parse arguments
+		for OPT in "$@"; do
+			case $OPT in
+				'-o' )
+					USE_CUSTOM_NAME=1
+					;;
+				* )
 					if [[ $USE_CUSTOM_NAME == 0 ]]; then
 						echo "invalid arguments !: set filename without '-o' option"
-					show_usage
-					return -1
-				else
-					OUT_FILE=$1
-				fi
-				;;
-		esac
-		shift
-	done
+						show_usage
+						return -1
+					else
+						OUT_FILE=$1
+					fi
+					;;
+			esac
+			shift
+		done
 
 		if [[ $USE_CUSTOM_NAME == 0 ]]; then
 			OUT_FILE="${IN_FILE}.encrypted"
 		else
-	if [[ -z $OUT_FILE ]]; then
-		echo "invalid arguments !: '-o' option requires 'out-file-name'"
+			if [[ -z $OUT_FILE ]]; then
+				echo "invalid arguments !: '-o' option requires 'out-file-name'"
 				show_usage
-		return -1
-	fi
+				return -1
+			fi
 		fi
 
 		echo "Encrypt:  \"${IN_FILE}\"  -->  \"${OUT_FILE}\""
 		openssl aes-256-cbc -e -in "${IN_FILE}" -out "${OUT_FILE}"
-fi
+	fi
 
 }
 
@@ -380,4 +388,9 @@ function disableAutoCommit {
 		launchctl unload ~/Library/LaunchAgents/com.popunbom.dotfiles.git-autocommit.plist;
 		launchctl list | grep "autocommit"
 	)
+}
+
+function sandbox {
+	ROOT_DIR="$HOME/Documents/sandbox"
+	cd $ROOT_DIR/$(find $ROOT_DIR -maxdepth 1 -type d | grep -v "^${ROOT_DIR}$" | sed -e "s%${ROOT_DIR}/%%g" | fzf)
 }
