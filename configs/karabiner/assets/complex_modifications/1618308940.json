@@ -1,0 +1,1 @@
+{"title":"IntelliJ","rules":[{"description":"Detect @","manipulators":[{"type":"basic","from":{"key_code":"open_bracket"},"conditions":[{"type":"frontmost_application_if","bundle_identifiers":["com.jetbrains.*"]}],"to":[{"repeat":true,"key_code":"2","modifiers":["left_shift"]}]}]}]}

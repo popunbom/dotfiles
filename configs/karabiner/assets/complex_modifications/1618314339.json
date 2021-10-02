@@ -1,0 +1,40 @@
+{
+  "title": "IntelliJ",
+  "rules": [
+    {
+      "description": "Detect: Cmd+@ -> Cmd+Shift+Ctrl+@",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "modifiers": {
+              "mandatory": [
+                "right_gui"
+              ]
+            },
+            "key_code": "open_bracket"
+          },
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "open_bracket",
+              "modifiers": [
+                "right_gui",
+                "right_control",
+                "right_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.jetbrains\\..*"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
