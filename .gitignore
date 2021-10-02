@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/api/vim,macos,windows
 
+# History file
+.zsh_history
+
 ### PtPython ###
 shims/ptpython/*
 !shims/ptpython/config.py
