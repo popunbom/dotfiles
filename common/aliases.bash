@@ -61,7 +61,7 @@ alias fv='fzf-prev'
 if type "ghq" > /dev/null 2>&1; then
 	alias gg='ghq get -p'
 	if type "fzf" > /dev/null 2>&1; then
-		alias gcd='cd $(ghq root)/$(ghq list | fzf)'
+		alias gcd='cd $(ghq root)/$(ghq list | sort | fzf)'
 		alias gls='ghq list | fzf'
 	fi
 fi
