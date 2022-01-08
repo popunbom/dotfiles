@@ -34,6 +34,7 @@ Preferences.sublime-settings
 ### Vim ###
 # Ignore NeoBundle Modules, exclude Neobundle itself
 /.vim/bundle/*
+!/.vim/bundle/neobundle.vim
 
 ### Karabiner ###
 # Ignore 'automatic_backups' of Karabiner-Element
