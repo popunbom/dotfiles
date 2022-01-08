@@ -1,34 +1,5 @@
 # Created by https://www.gitignore.io/api/vim,macos,windows
 
-# History file
-.zsh_history
-
-### PtPython ###
-shims/.ptpython/*
-!shims/.ptpython/config.py
-
-#### iPython ####
-# History databases
-shims/.ipython/profile_*
-!shims/.ipython/profile_*/startup
-shims/.ipython/profile_*/startup/__pycache__
-
-# Ignore: Preferences.sublime-settings
-Preferences.sublime-settings
-
-# Ignore inside 'shims/config' dir, exclude some configs
-shims/.config/*
-!shims/.config/karabiner/
-!shims/.config/colorls/
-!shims/.config/neofetch/
-
-# Ignore NeoBundle Modules, exclude Neobundle itself
-shims/.vim/bundle/*
-
-# Ignore 'automatic_backups' of Karabiner-Element
-shims/.config/karabiner/automatic_backups
-
-
 ### macOS ###
 # General
 .DS_Store
