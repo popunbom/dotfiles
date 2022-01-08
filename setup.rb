@@ -19,11 +19,13 @@ def yes_no(prompt = "Confirmed ? (Y/n): ")
   end
 end
 
-config = open('./config.yaml') { |f| YAML.load(f.read) }
+config_path = "#{__dir__}/config.yaml"
 
+config = open(confi_path) { |f| YAML.load(f.read) }
 commands = config["symlinks"].map do |symlink|
-  src = File.absolute_path(expand_env(symlink["src"]))
-  dst = File.absolute_path(expand_env(symlink["dst"]))
+  base_dir = File.dirname(config_path)
+  src = File.absolute_path(expand_env(symlink["src"]), base_dir)
+  dst = File.absolute_path(expand_env(symlink["dst"]), base_dir)
   "ln -s #{src} #{dst}"
 end
 
@@ -45,11 +47,11 @@ puts <<EOS
 EOS
 
 puts "=============== EXECUTING COMMANDS ==============="
-commands.each {|command| puts command}
+commands.each {|command| puts "$ #{command}"}
 puts "=================================================="
 
 if yes_no() then
-  commands.each {|command| puts "Exec: #{command}"}
+  commands.each {|command| `#{command}`}
 else
   puts "Abort -- exit."
 end
