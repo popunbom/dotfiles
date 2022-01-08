@@ -8,11 +8,11 @@ fi
 # XXenv init 
 # 遅い！zsh だと遅延評価で改善できるらしい
 # anyenv を使う方針も検討する
-# for XXenv in "pyenv" "rbenv" "nodenv" "jenv"; do
-# 	if type $XXenv 2>&1 >/dev/null ; then
-# 		eval "$(${XXenv} init -)"
-# 	fi
-# done
+for XXenv in "pyenv" "rbenv" "nodenv" "jenv"; do
+	if type $XXenv 2>&1 >/dev/null ; then
+		eval "$(${XXenv} init -)"
+	fi
+done
 
 # Node
 export NODE_PATH=$(npm root -g)

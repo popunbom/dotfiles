@@ -1,6 +1,9 @@
 # dotfiles
 
-My dotfiles
+```bash
+$ git clone --recursive https://github.com/popunbom/dotfiles ~/.dotfiles
+$ ruby ~/.dotfiles/setup.rb
+```
 
 ## Includes
 
@@ -16,19 +19,6 @@ My dotfiles
 - Sublime Text 3
 - iTerm2
 - PyCharm
-
-## How to Setup
-1. Clone repository
-
-```bash
-git clone --recursive https://github.com/popunbom/dotfiles ~/.dotfiles
-
-```
-
-2. Run `setup.sh`
-```bash
-~/.dotfiles/setup.sh
-```
 
 ### for Vim
 For the first time, run this command

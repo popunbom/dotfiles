@@ -30,9 +30,13 @@ if type "kubectl" > /dev/null 2>&1; then
 	source <(kubectl completion zsh)
 fi
 
+# iTerm2
+if [[ -e ~/.zsh/.iterm2_shell_integration.zsh ]]; then
+	source ~/.zsh/.iterm2_shell_integration.zsh
+fi
+
 # Add to fpath
-fpath=(
-  /usr/local/share/zsh-completions
-  ${ZSH_COMP_DIR}
-  $fpath
-)
+fpath=(${ZSH_COMP_DIR} $fpath)
+if type "brew" > /dev/null 2>&1; then
+	fpath=($(brew --prefix)/share/zsh-completions $fpath)
+fi
