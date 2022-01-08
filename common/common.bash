@@ -15,6 +15,9 @@ for XXenv in "pyenv" "rbenv" "nodenv" "jenv"; do
 done
 
 # Node
-export NODE_PATH=$(npm root -g)
+if type "npm" > /dev/null 2>&1; then
+	export NODE_PATH=$(npm root -g)
+fi
+
 # Rust
-source "$HOME/.cargo/env"
+[[ -e "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
