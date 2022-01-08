@@ -21,7 +21,7 @@ end
 
 config_path = "#{__dir__}/config.yaml"
 
-config = open(confi_path) { |f| YAML.load(f.read) }
+config = open(config_path) { |f| YAML.load(f.read) }
 commands = config["symlinks"].map do |symlink|
   base_dir = File.dirname(config_path)
   src = File.absolute_path(expand_env(symlink["src"]), base_dir)
