@@ -88,4 +88,6 @@ if type "pygmentize" > /dev/null 2>&1; then
 fi
 
 # ALIAS: PATH
-alias PATH="echo $PATH | tr ':' '\n'"
+function PATH() {
+	echo $PATH | tr ':' '\n'
+}
