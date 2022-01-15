@@ -17,6 +17,11 @@ export GOPATH="${HOME}/.golang"
 export PYTHONUNBUFFERED=1
 export PIPENV_VENV_IN_PROJECT="true"
 
+# Homebrew
+if type "brew" > /dev/null 2>&1; then
+  eval $(brew shellenv)
+fi
+
 # PATH
 _path=(
   $HOME/.pyenv/bin
