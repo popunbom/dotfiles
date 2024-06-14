@@ -1,2 +1,0 @@
-alias whos pp { k:type(v) for k, v in vars().items() }
-alias . u;;d;;l
