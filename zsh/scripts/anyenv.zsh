@@ -7,3 +7,6 @@ export PYENV_ROOT="${HOME}/.pyenv"
 # nodenv
 export NODE_PATH="$(npm root -g)"
 (( $+commands[nodenv] )) && eval "$(nodenv init -)"
+
+# jenv
+(( $+commands[jenv] )) && eval "$(jenv init -)"
