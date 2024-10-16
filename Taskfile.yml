@@ -1,0 +1,12 @@
+version: '3'
+
+vars:
+  SUBDIRS:
+    - config
+    - vim
+    - zsh
+
+tasks:
+  default:
+    - for: { var: SUBDIRS, as: SUBDIR }
+      cmd: 'cd {{ .SUBDIR }} && task'

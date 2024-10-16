@@ -1,0 +1,6 @@
+version: '3'
+
+tasks:
+  default:
+    - /bin/bash <(curl -fsSL https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh
+    - ln -s {{ .TASKFILE_DIR }}/.vimrc {{ env "HOME"}}/.vimrc
