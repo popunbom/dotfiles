@@ -128,9 +128,8 @@ function myFileDecrypt {
 
 # Workspace
 alias ws="workspace"
+export WORKSPACE_DIR="${HOME}/Documents/workspaces"
 workspace() {
-    DEFAULT_WORKSPACE_DIR="${HOME}/workspace"
-    WORKSPACE_DIR="${WORKSPACE_DIR:-${DEFAULT_WORKSPACE_DIR}}"
 
     info() {
         printf "\033[34m%s\033[m\n" "$1"
@@ -144,6 +143,7 @@ workspace() {
 		usage: workspace [-h] {add [direectory]} ...
 
 		Simply workspace manager
+		- WORKSPACE_DIR: ${WORKSPACE_DIR}
 
 		actions:
 		  add [direectory]    Add workspace folder
