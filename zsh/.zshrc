@@ -8,7 +8,7 @@ source "${ZDOTDIR}/scripts/exports.zsh"
 source "${ZDOTDIR}/scripts/aliases.zsh"
 source "${ZDOTDIR}/scripts/fpaths.zsh"
 source "${ZDOTDIR}/scripts/prezto/completion.init.zsh"
-# source "${ZDOTDIR}/scripts/iterm2/shell_integration.zsh"
+source "${ZDOTDIR}/scripts/iterm2/shell_integration.zsh"
 
 autoload -Uz compinit && compinit
 eval "$(sheldon source)"

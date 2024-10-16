@@ -1,0 +1,6 @@
+version: '3'
+
+tasks:
+  default:
+    - ln -s {{ .TASKFILE_DIR }} {{ env "HOME"}}/.config
+    - ln -s {{ .TASKFILE_DIR }}/.gitconfig {{ env "HOME"}}/.gitconfig
