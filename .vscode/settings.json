@@ -1,7 +1,0 @@
-{
-  "ruby.interpreter.commandPath": "/Users/popunbom/.rbenv/shims/ruby",
-  "ruby.intellisense": "rubyLocate",
-  "ruby.useLanguageServer": true,
-  "solargraph.definitions": true,
-  "solargraph.diagnostics": true,
-}

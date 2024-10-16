@@ -1,6 +1,8 @@
 {
   "recommendations": [
-    "castwide.solargraph",
-    "rebornix.ruby"
+    "mads-hartmann.bash-ide-vscode",
+    "timonwong.shellcheck",
+    "jeff-hykin.better-shellscript-syntax",
+    "tamasfe.even-better-toml"
   ]
 }
