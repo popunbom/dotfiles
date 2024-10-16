@@ -13,5 +13,5 @@ source "${ZDOTDIR}/scripts/prezto/completion.init.zsh"
 autoload -Uz compinit && compinit
 eval "$(sheldon source)"
 
-zsh-defer source "${ZDOTDIR}/scripts/anyenv.zsh"
+zsh-defer (( $+commands[mise] )) && eval "$(mise activate zsh)"
 zsh-defer source "${ZDOTDIR}/scripts/functions.zsh"
