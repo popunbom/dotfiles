@@ -1,0 +1,6 @@
+brew "ghq"
+brew "go-task"
+brew "lsd"
+brew "mise"
+brew "sheldon"
+brew "zsh-completions"
