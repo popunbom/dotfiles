@@ -2,10 +2,11 @@
 
 ## Requirements
 
-- [Taskfile](https://taskfile.dev/)
+- [Homebrew](https://brew.sh/)
 
 ## Setup
 
 ```shell
+$ brew bundle
 $ task
 ```
