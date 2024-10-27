@@ -4,6 +4,8 @@
 <dict>
 	<key>Command</key>
 	<string></string>
+	<key>CopySelection</key>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>tokyo-night</key>
@@ -363,6 +365,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>23BB66FB-613D-437A-98BB-3FED51718B49</string>
+	<key>DoubleClickPerformsSmartSelection</key>
+	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -1187,13 +1191,13 @@ New Tab with Current Profile</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.33333334329999997</real>
+				<real>0.20000000000000001</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.22352941330000001</real>
+				<real>0.30196078431372547</real>
 				<key>Red Component</key>
-				<real>0.19607843459999999</real>
+				<real>0.29019607843137257</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -2213,13 +2217,13 @@ New Tab with Current Profile</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.33333334329999997</real>
+				<real>0.20217078924179077</real>
 				<key>Color Space</key>
-				<string>sRGB</string>
+				<string>P3</string>
 				<key>Green Component</key>
-				<real>0.22352941330000001</real>
+				<real>0.3037986159324646</real>
 				<key>Red Component</key>
-				<real>0.19607843459999999</real>
+				<real>0.29091382026672363</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
