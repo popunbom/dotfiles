@@ -3,8 +3,10 @@
 unsetopt GLOBAL_RCS
 
 source "${ZDOTDIR}/scripts/paths.zsh"
-
-(( $+commands[mise] )) && eval "$(mise activate zsh)"
+if (( $+commands[mise] )); then
+  eval "$(mise activate zsh)"
+  source <(mise env)
+fi
 
 source "${ZDOTDIR}/scripts/aliases.zsh"
 source "${ZDOTDIR}/scripts/exports.zsh"
