@@ -10,7 +10,7 @@
 #
 # See the documentation for more https://github.com/rossmacarthur/sheldon#readme
 
-shell = 'zsh'
+shell = "zsh"
 
 # Templates
 [templates]
@@ -30,34 +30,34 @@ fzf-source = "{% for file in files %}source \"{{ file }}\"\n{% endfor %}"
 # Loading immediately
 [plugins.zsh-async]
 github = "mafredri/zsh-async"
-apply = ['source']
+apply = ["source"]
 
 [plugins.zsh-defer]
-github = 'romkatv/zsh-defer'
-apply = ['source']
+github = "romkatv/zsh-defer"
+apply = ["source"]
 
 [plugins.prompt-pure]
 github = "sindresorhus/pure"
-apply = ['source']
+apply = ["source"]
 
 
 # Loading deferred
 [plugins.enhancd]
 github = "babarot/enhancd"
-apply = ['defer']
+apply = ["defer"]
 
 [plugins.fzf]
 github = "junegunn/fzf"
-apply = ['fzf-install', 'defer']
+apply = ["fzf-install", "defer"]
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
-apply = ['defer']
+apply = ["defer"]
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
-apply = ['defer']
+apply = ["defer"]
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
-apply = ['defer']
+apply = ["defer"]
