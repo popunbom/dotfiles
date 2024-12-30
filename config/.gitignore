@@ -1,4 +1,6 @@
-binwalk/
-gtk*/
-rclone/
-wireshark/
+*
+!iterm2/
+!karabiner/
+!sheldon/
+!.gitconfig
+!Taskfile.yml
