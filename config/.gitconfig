@@ -9,7 +9,6 @@
 	editor = vim -c \"set fenc=utf-8\"
 	quotepath = false
 	autocrlf = input
-	excludesfile = /Users/popunbom/.gitignore_global
 
 [pager]
 	branch = cat
