@@ -10,3 +10,11 @@ tasks:
   default:
     - for: { var: SUBDIRS, as: SUBDIR }
       cmd: 'cd {{ .SUBDIR }} && task'
+  
+  setup-mise:
+    preconditions:
+      - sh: 'type mise >/dev/null'
+        msg: 'command not found: mise'
+    cmds:
+      - 'mise plugin add ni https://github.com/CanRau/asdf-ni.git'
+      - '(cd $HOME && mise up)'
