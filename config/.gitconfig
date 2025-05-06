@@ -50,6 +50,7 @@
 	uns = reset HEAD
 	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	unstage = reset HEAD
+	rm-rf = "!f(){ git rm -rf .; git clean -fxd; }; f"
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
