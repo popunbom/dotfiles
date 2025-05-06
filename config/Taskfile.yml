@@ -3,4 +3,5 @@ version: '3'
 tasks:
   default:
     - ln -s {{ .TASKFILE_DIR }} {{ env "HOME"}}/.config
-    - ln -s {{ .TASKFILE_DIR }}/.gitconfig {{ env "HOME"}}/.gitconfig
+    - ln -s {{ .TASKFILE_DIR }}/.gitconfig {{ env "HOME"}}/git/config
+    - ln -s {{ .TASKFILE_DIR }}/.gitignore {{ env "HOME"}}/git/ignore
