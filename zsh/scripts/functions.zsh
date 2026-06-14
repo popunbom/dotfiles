@@ -2,7 +2,7 @@
 
 # docker
 function drun {
-  DOCKER_IMAGE="$(docker images | fzf --header-lines=1 | awk -F' ' '{print $3}')";
+  DOCKER_IMAGE="$(docker images | fzf --header-lines=1 | awk -F' ' '{print $2}')";
   docker run --rm -v "$(pwd):/workspace" -w '/workspace' --entrypoint='' -it "${DOCKER_IMAGE}" $@
 }
 
