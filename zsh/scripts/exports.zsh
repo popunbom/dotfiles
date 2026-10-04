@@ -17,6 +17,7 @@ export K9S_EDITOR='env LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8 vim'
 # Golang
 export GOPATH="${HOME}/.golang"
 export GOBIN="${GOPATH}/bin"
+[[ -d ${GOBIN} ]] && export PATH="${GOBIN}${PATH+:${PATH}}"
 
 # Python
 export PYTHONUNBUFFERED=1

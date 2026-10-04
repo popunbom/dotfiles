@@ -2,5 +2,12 @@
   "files.associations": {
     "config": "gitconfig",
     "ignore": "ignore",
+  },
+  "yaml.validate": true,
+  "yaml.schemas": {
+    "https://taskfile.dev/schema.json": [
+      "*/Taskfile.yml",
+      "*/Taskfile.yaml"
+    ]
   }
 }

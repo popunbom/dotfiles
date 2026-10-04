@@ -1,12 +1,9 @@
 # dotfiles
 
-## Requirements
-
-- [Homebrew](https://brew.sh/)
-
-## Setup
-
 ```shell
-$ brew bundle
+$ ./bootstrap.sh
+
+# Restarting shell
+
 $ task
 ```

@@ -3,6 +3,7 @@
     "mads-hartmann.bash-ide-vscode",
     "timonwong.shellcheck",
     "jeff-hykin.better-shellscript-syntax",
-    "tamasfe.even-better-toml"
+    "tamasfe.even-better-toml",
+    "redhat.vscode-yaml"
   ]
 }
