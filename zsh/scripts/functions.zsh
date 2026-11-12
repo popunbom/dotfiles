@@ -192,6 +192,7 @@ workspace() {
             ;;
         *)
             error "Invalid action: '${ACTION}'"
+						print_help
             return 255
             ;;
         esac
